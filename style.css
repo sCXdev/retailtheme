@@ -1,4 +1,38 @@
 @charset "UTF-8";
+/***** Font Imports *****/
+@font-face {
+  font-family: 'custom heading font woff';
+  src: url($custom_header_font) format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'custom font woff';
+  src: url($custom_text_font) format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'custom heading font woff2';
+  src: url($custom_header_font) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'custom font woff2';
+  src: url($custom_text_font) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'custom heading font ttf';
+  src: url($custom_header_font) format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'custom font ttf';
+  src: url($custom_text_font) format('truetype');
+  font-display: swap;
+}
+
+
+
 /***** Normalize.css *****/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {

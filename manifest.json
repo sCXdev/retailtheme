@@ -1,7 +1,7 @@
 {
-  "name": "Copenhagen",
-  "author": "Zendesk",
-  "version": "2.19.4",
+  "name": "Retail Theme",
+  "author": "SuccessCX",
+  "version": "0.0.00001",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -48,7 +48,7 @@
           "type": "color",
           "description": "visited_link_color_description",
           "label": "visited_link_color_label",
-          "value": "#9358B0"
+          "value": "#2214A8"
         },
         {
           "identifier": "background_color",
@@ -63,12 +63,48 @@
       "label": "fonts_group_label",
       "variables": [
         {
+          "identifier": "custom_header_font",
+          "type": "file",
+          "description": "WOFF or TTF file only. Make sure to select custom in dropdown also",
+          "label": "Custom heading font file"
+        },
+        {
+          "identifier": "custom_text_font",
+          "type": "file",
+          "description": "WOFF or TTF file only. Make sure to select custom in dropdown also",
+          "label": "Custom text font file"
+        },
+        {
           "identifier": "heading_font",
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+          "value": "'Montserrat', sans-serif",
           "options": [
+            {
+              "label": "Custom WOFF Sans Serif Fallback",
+              "value": "'custom heading font woff', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Custom WOFF Serif Fallback",
+              "value": "'custom heading font woff', Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Custom WOFF2 Sans Serif Fallback",
+              "value": "'custom heading font woff2', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Custom WOFF2 Serif Fallback",
+              "value": "'custom heading font woff2', Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Custom TTF Sans Serif Fallback",
+              "value": "'custom heading font ttf', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Custom TTF Serif Fallback",
+              "value": "'custom heading font ttf', Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
             {
               "label": "System",
               "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
@@ -128,6 +164,86 @@
             {
               "label": "Lucida Grande",
               "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "GF: Inter",
+              "value": "'Inter', sans-serif"
+            },
+            {
+              "label": "GF: Josefin Sans",
+              "value": "'Josefin Sans', sans-serif"
+            },
+            {
+              "label": "GF: Lato",
+              "value": "'Lato', sans-serif"
+            },
+            {
+              "label": "GF: Libre Baskerville",
+              "value": "'Libre Baskerville', serif"
+            },
+            {
+              "label": "GF: Lora",
+              "value": "'Lora', serif"
+            },
+            {
+              "label": "GF: Manrope",
+              "value": "'Manrope', sans-serif"
+            },
+            {
+              "label": "GF: Merriweather",
+              "value": "'Merriweather', serif"
+            },
+            {
+              "label": "GF: Montserrat",
+              "value": "'Montserrat', sans-serif"
+            },
+            {
+              "label": "GF: Open Sans",
+              "value": "'Open Sans', sans-serif"
+            },
+            {
+              "label": "GF: Oswald",
+              "value": "'Oswald', sans-serif"
+            },
+            {
+              "label": "GF: Playfair Display",
+              "value": "'Playfair Display', serif"
+            },
+            {
+              "label": "GF: Poppins",
+              "value": "'Poppins', sans-serif"
+            },
+            {
+              "label": "GF: Questrial",
+              "value": "'Questrial', sans-serif"
+            },
+            {
+              "label": "GF: Quicksand",
+              "value": "'Quicksand', sans-serif"
+            },
+            {
+              "label": "GF: Raleway",
+              "value": "'Raleway', sans-serif"
+            },
+            {
+              "label": "GF: Roboto",
+              "value": "'Roboto', sans-serif"
+            },
+            {
+              "label": "GF: Roboto Condensed",
+              "value": "'Roboto Condensed', sans-serif"
+            },
+            {
+              "label": "GF: Roboto Slab",
+              "value": "'Roboto Slab', serif"
+            },
+            {
+              "label": "GF: Source Sans Pro",
+              "value": "'Source Sans Pro', sans-serif"
+            },
+            {
+              "label": "GF: Space Grotesk",
+              "value": "'Space Grotesk', sans-serif"
             },
             {
               "label": "Trebuchet MS",
@@ -140,8 +256,32 @@
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
-          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+          "value": "'Montserrat', sans-serif",
           "options": [
+            {
+              "label": "Custom WOFF Sans Serif Fallback",
+              "value": "'custom font woff', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Custom WOFF Serif Fallback",
+              "value": "'custom font woff', Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Custom WOFF2 Sans Serif Fallback",
+              "value": "'custom font woff2', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Custom WOFF2 Serif Fallback",
+              "value": "'custom font woff2', Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },     
+            {
+              "label": "Custom TTF Sans Serif Fallback",
+              "value": "'custom font ttf', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Custom TTF Serif Fallback",
+              "value": "'custom font ttf', Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
             {
               "label": "System",
               "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
@@ -205,6 +345,86 @@
             {
               "label": "Trebuchet MS",
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "GF: Inter",
+              "value": "'Inter', sans-serif"
+            },
+            {
+              "label": "GF: Josefin Sans",
+              "value": "'Josefin Sans', sans-serif"
+            },
+            {
+              "label": "GF: Lato",
+              "value": "'Lato', sans-serif"
+            },
+            {
+              "label": "GF: Libre Baskerville",
+              "value": "'Libre Baskerville', serif"
+            },
+            {
+              "label": "GF: Lora",
+              "value": "'Lora', serif"
+            },
+            {
+              "label": "GF: Manrope",
+              "value": "'Manrope', sans-serif"
+            },
+            {
+              "label": "GF: Merriweather",
+              "value": "'Merriweather', serif"
+            },
+            {
+              "label": "GF: Montserrat",
+              "value": "'Montserrat', sans-serif"
+            },
+            {
+              "label": "GF: Open Sans",
+              "value": "'Open Sans', sans-serif"
+            },
+            {
+              "label": "GF: Oswald",
+              "value": "'Oswald', sans-serif"
+            },
+            {
+              "label": "GF: Playfair Display",
+              "value": "'Playfair Display', serif"
+            },
+            {
+              "label": "GF: Poppins",
+              "value": "'Poppins', sans-serif"
+            },
+            {
+              "label": "GF: Questrial",
+              "value": "'Questrial', sans-serif"
+            },
+            {
+              "label": "GF: Quicksand",
+              "value": "'Quicksand', sans-serif"
+            },
+            {
+              "label": "GF: Raleway",
+              "value": "'Raleway', sans-serif"
+            },
+            {
+              "label": "GF: Roboto",
+              "value": "'Roboto', sans-serif"
+            },
+            {
+              "label": "GF: Roboto Condensed",
+              "value": "'Roboto Condensed', sans-serif"
+            },
+            {
+              "label": "GF: Roboto Slab",
+              "value": "'Roboto Slab', serif"
+            },
+            {
+              "label": "GF: Source Sans Pro",
+              "value": "'Source Sans Pro', sans-serif"
+            },
+            {
+              "label": "GF: Space Grotesk",
+              "value": "'Space Grotesk', sans-serif"
             }
           ]
         }
@@ -292,6 +512,215 @@
           "description": "recent_activity_description",
           "label": "recent_activity_label",
           "value": true
+        }
+      ]
+    },
+    {
+      "label": "🏠 Category Tiles",
+      "variables": [
+        {
+          "identifier": "cat_image_type",
+          "type": "list",
+          "description": "Standard: Icon, Photo or no image. Dynamic: with image or without",
+          "label": "Category tiles image type",
+          "value": "icon",
+          "options": [
+            {
+              "label": "Icon",
+              "value": "icon"
+            },
+            {
+              "label": "Photo",
+              "value": "photo"
+            }
+          ]
+        },
+        {
+          "identifier": "cat_style_type",
+          "type": "list",
+          "description": "Standard: Icon, Photo or no image. Dynamic: with image or without",
+          "label": "Category tiles image type",
+          "value": "dynamic_no_icon",
+          "options": [
+            {
+              "label": "Icon",
+              "value": "icon"
+            },
+            {
+              "label": "Photo",
+              "value": "photo"
+            }
+          ]
+        },
+        {
+          "identifier": "category_image_height",
+          "type": "text",
+          "description": "Choose the size of the image when using a non dynamic category display",
+          "label": "Category image height",
+          "value": "80"
+        },
+        {
+          "identifier": "category_title_name",
+          "type": "text",
+          "description": "The title to appear above the categories on the homepage",
+          "label": "Category title",
+          "value": "Topics"
+        },
+        {
+          "identifier": "category_1_id",
+          "type": "text",
+          "description": "ID for category image 1. Can be taken from URL when viewing category",
+          "label": "Category ID 1",
+          "value": "900000052463"
+        },
+        {
+          "identifier": "category_1_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 1 Image"
+        },
+        {
+          "identifier": "category_2_id",
+          "type": "text",
+          "description": "ID for category image 2. Can be taken from URL when viewing category",
+          "label": "Category ID 2",
+          "value": "9586990042899"
+        },
+        {
+          "identifier": "category_2_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 2 Image"
+        },
+        {
+          "identifier": "category_3_id",
+          "type": "text",
+          "description": "ID for category image 3. Can be taken from URL when viewing category",
+          "label": "Category ID 3",
+          "value": "9586960550931"
+        },
+        {
+          "identifier": "category_3_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 3 Image"
+        },
+        {
+          "identifier": "category_4_id",
+          "type": "text",
+          "description": "ID for category image 4. Can be taken from URL when viewing category",
+          "label": "Category ID 4",
+          "value": "9586909803411"
+        },
+        {
+          "identifier": "category_4_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 4 Image"
+        },
+        {
+          "identifier": "category_5_id",
+          "type": "text",
+          "description": "ID for category image 5. Can be taken from URL when viewing category",
+          "label": "Category ID 5",
+          "value": "9586896617747"
+        },
+        {
+          "identifier": "category_5_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 5 Image"
+        },
+        {
+          "identifier": "category_6_id",
+          "type": "text",
+          "description": "ID for category image 6. Can be taken from URL when viewing category",
+          "label": "Category ID 6",
+          "value": "9586850453779"
+        },
+        {
+          "identifier": "category_6_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 6 Image"
+        },
+        {
+          "identifier": "category_7_id",
+          "type": "text",
+          "description": "ID for category image 7. Can be taken from URL when viewing category",
+          "label": "Category ID 7",
+          "value": "4408557863439"
+        },
+        {
+          "identifier": "category_7_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 7 Image"
+        },
+        {
+          "identifier": "category_8_id",
+          "type": "text",
+          "description": "ID for category image 8. Can be taken from URL when viewing category",
+          "label": "Category ID 8",
+          "value": "360000032235"
+        },
+        {
+          "identifier": "category_8_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 8 Image"
+        },
+        {
+          "identifier": "category_9_id",
+          "type": "text",
+          "description": "ID for category image 9. Can be taken from URL when viewing category",
+          "label": "Category ID 9",
+          "value": "360000758215"
+        },
+        {
+          "identifier": "category_9_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 9 Image"
+        },
+        {
+          "identifier": "category_10_id",
+          "type": "text",
+          "description": "ID for category image 10. Can be taken from URL when viewing category",
+          "label": "Category ID 10",
+          "value": "360000047616"
+        },
+        {
+          "identifier": "category_10_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 10 Image"
+        },
+        {
+          "identifier": "category_11_id",
+          "type": "text",
+          "description": "ID for category image 11. Can be taken from URL when viewing category",
+          "label": "Category ID 11",
+          "value": "360000051415"
+        },
+        {
+          "identifier": "category_11_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 11 Image"
+        },
+        {
+          "identifier": "category_12_id",
+          "type": "text",
+          "description": "ID for category image 12. Can be taken from URL when viewing category",
+          "label": "Category ID 12",
+          "value": ""
+        },
+        {
+          "identifier": "category_12_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 12 Image"
         }
       ]
     },
