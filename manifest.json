@@ -13,42 +13,35 @@
           "type": "color",
           "description": "brand_color_description",
           "label": "brand_color_label",
-          "value": "#17494D"
+          "value": "#000000"
         },
         {
           "identifier": "brand_text_color",
           "type": "color",
           "description": "brand_text_color_description",
           "label": "brand_text_color_label",
-          "value": "#FFFFFF"
+          "value": "#000000"
         },
         {
           "identifier": "text_color",
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "#2F3941"
+          "value": "#000000"
         },
         {
           "identifier": "link_color",
           "type": "color",
           "description": "link_color_description",
           "label": "link_color_label",
-          "value": "#1F73B7"
+          "value": "#000000"
         },
         {
           "identifier": "hover_link_color",
           "type": "color",
           "description": "hover_link_color_description",
           "label": "hover_link_color_label",
-          "value": "#0F3554"
-        },
-        {
-          "identifier": "visited_link_color",
-          "type": "color",
-          "description": "visited_link_color_description",
-          "label": "visited_link_color_label",
-          "value": "#2214A8"
+          "value": "#000000"
         },
         {
           "identifier": "background_color",
@@ -56,6 +49,48 @@
           "description": "background_color_description",
           "label": "background_color_label",
           "value": "#FFFFFF"
+        },
+        {
+          "identifier": "border_color",
+          "type": "color",
+          "description": "The color of the border to be used on lines and blocks",
+          "label": "Border color",
+          "value": "#f2f2f2"
+        },
+        {
+          "identifier": "header_bg_color",
+          "type": "color",
+          "description": "Color of the header background",
+          "label": "Header background color",
+          "value": "#373737"
+        },
+        {
+          "identifier": "header_text_color",
+          "type": "color",
+          "description": "Color of the header fonts",
+          "label": "Header text color",
+          "value": "#FDFDFD"
+        },
+        {
+          "identifier": "footer_bg_color",
+          "type": "color",
+          "description": "Color of the footer background",
+          "label": "Footer background color",
+          "value": "#00217a"
+        },
+        {
+          "identifier": "footer_text_color",
+          "type": "color",
+          "description": "Color of the footer fonts",
+          "label": "Footer text color",
+          "value": "#FFFFFF"
+        },
+        {
+          "identifier": "hero_text_color",
+          "type": "color",
+          "description": "Color of hero text shown above the search bar",
+          "label": "Hero title text color",
+          "value": "rgba(255, 255, 255, 1)"
         }
       ]
     },
@@ -79,7 +114,7 @@
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "'Montserrat', sans-serif",
+          "value": "'Josefin Sans', sans-serif",
           "options": [
             {
               "label": "Custom WOFF Sans Serif Fallback",
@@ -256,7 +291,7 @@
           "type": "list",
           "description": "text_font_description",
           "label": "text_font_label",
-          "value": "'Montserrat', sans-serif",
+          "value": "'Poppins', sans-serif",
           "options": [
             {
               "label": "Custom WOFF Sans Serif Fallback",
@@ -451,6 +486,13 @@
           "type": "file",
           "description": "favicon_description",
           "label": "favicon_label"
+        },
+        {
+          "identifier": "border_radius",
+          "type": "text",
+          "description": "Set the amount of smoothing on corners",
+          "label": "Border radius",
+          "value": "0"
         }
       ]
     },
@@ -500,6 +542,43 @@
           "description": "scoped_community_search_description",
           "label": "scoped_community_search_label",
           "value": true
+        },
+        {
+          "identifier": "search_border_radius",
+          "type": "text",
+          "description": "Set the amount of smoothing on the search bar",
+          "label": "Search border radius",
+          "value": "0"
+        },
+        {
+          "identifier": "search_text",
+          "type": "text",
+          "description": "Place holder text for the search bar, leave blank to use default",
+          "label": "Search text",
+          "value": "Find your answer"
+        },
+        {
+          "identifier": "search_width",
+          "type": "text",
+          "description": "Specify in px how wide the search bar will be at maximum, only enter a number",
+          "label": "Search bar width",
+          "value": "540"
+        },
+        {
+          "identifier": "hero_text",
+          "type": "text",
+          "description": "Place holder text for the hero banner",
+          "label": "Hero text",
+          "value": "Help Center"
+        },
+        {
+          "identifier": "hero_height",
+          "type": "range",
+          "description": "Height of Hero Banner",
+          "label": "Hero height",
+          "min": 220,
+          "max": 800,
+          "value": 350
         }
       ]
     },
@@ -512,6 +591,196 @@
           "description": "recent_activity_description",
           "label": "recent_activity_label",
           "value": true
+        },        
+        {
+          "identifier": "show_promoted",
+          "type": "checkbox",
+          "description": "Define whether promoted articles are displayed on the ",
+          "label": "Show promoted Articles",
+          "value": true
+        },
+        {
+          "identifier": "promoted_border_type",
+          "type": "list",
+          "description": "Define the style of border for the category items",
+          "label": "Promoted border type",
+          "value": "background_1",
+          "options": [
+            {
+              "label": "Outline 1",
+              "value": "outline_1"
+            },
+            {
+              "label": "Box shadow 1",
+              "value": "box_shadow_1"
+            },
+            {
+              "label": "Box shadow 2",
+              "value": "box_shadow_2"
+            },
+            {
+              "label": "Background 1",
+              "value": "background_1"
+            },
+            {
+              "label": "Background 2",
+              "value": "background_2"
+            },
+            {
+              "label": "None",
+              "value": "none"
+            }
+          ]
+        }
+      ]
+    }, 
+    {
+      "label": "👤 Header",
+      "variables": [
+        {
+          "identifier": "header_text_style",
+          "type": "list",
+          "description": "Choose which font is displayed in the header",
+          "label": "Header text style",
+          "value": "header_hf_standard",
+          "options": [
+            {
+              "label": "header_tf_standard",
+              "value": "Standard font: Standard Case"
+            },
+            {
+              "label": "header_tf_uppercase",
+              "value": "Standard font: Uppercase"
+            },
+            {
+              "label": "header_hf_standard",
+              "value": "Heading font: Standard Case"
+            },
+            {
+              "label": "header_hf_uppercase",
+              "value": "Heading font: Uppercase"
+            }
+          ]
+        },
+        {
+          "identifier": "header_font",
+          "type": "checkbox",
+          "description": "Use the previously selected heading font for the header",
+          "label": "Use the heading font?",
+          "value": true
+        },
+        {
+          "identifier": "header_logo_link",
+          "type": "text",
+          "description": "Link for when users click on top left logo",
+          "label": "Logo link",
+          "value": "/hc/"
+        },
+        {
+          "identifier": "header_logo_name",
+          "type": "checkbox",
+          "description": "Show the help centre name next to the left hand logo",
+          "label": "Show help center name?",
+          "value": true
+        },
+        {
+          "identifier": "header_sign_in",
+          "type": "checkbox",
+          "description": "Show the sign in button for Anonymous users",
+          "label": "Show Sign In link?",
+          "value": false
+        },
+        {
+          "identifier": "header_return_on",
+          "type": "checkbox",
+          "description": "Show return to main website for Anonymous users",
+          "label": "Return to link?",
+          "value": true
+        },
+        {
+          "identifier": "header_return_link",
+          "type": "text",
+          "description": "Link for return to main website",
+          "label": "Header return to link",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "header_return_name",
+          "type": "text",
+          "description": "Name for return to main website",
+          "label": "Header return to name",
+          "value": "Return to Main Website"
+        },
+        {
+          "identifier": "header_return_color",
+          "type": "color",
+          "description": "Border color for elements within the page",
+          "label": "Header return to color",
+          "value": "#1B3577"
+        },
+        {
+          "identifier": "header_submit_request",
+          "type": "checkbox",
+          "description": "Enable a submit a request link",
+          "label": "Header submit a request",
+          "value": true
+        },
+        {
+          "identifier": "header_item_1_link",
+          "type": "text",
+          "description": "Link for item 1 in the header",
+          "label": "Header item 1 link",
+          "value": "/hc/"
+        },
+        {
+          "identifier": "header_item_1_name",
+          "type": "text",
+          "description": "Name for item 1 in the header. leave blank to deactivate",
+          "label": "Header item 1 name",
+          "value": "Link 1"
+        },
+        {
+          "identifier": "header_item_2_link",
+          "type": "text",
+          "description": "Link for item 2 in the header",
+          "label": "Header item 2 link",
+          "value": "/hc/"
+        },
+        {
+          "identifier": "header_item_2_name",
+          "type": "text",
+          "description": "Name for item 2 in the header. leave blank to deactivate",
+          "label": "Header item 2 name",
+          "value": "Link 2"
+        },
+        {
+          "identifier": "header_item_3_link",
+          "type": "text",
+          "description": "Link for item 3 in the header",
+          "label": "Header item 3 link",
+          "value": "#"
+        },
+        {
+          "identifier": "header_item_3_name",
+          "type": "text",
+          "description": "Name for item 3 in the header. leave blank to deactivate",
+          "label": "Header item 3 name",
+          "value": "Link 3"
+        }
+        ,
+        {
+          "identifier": "header_item_4_link",
+          "type": "text",
+          "description": "Link for item 4 in the header",
+          "label": "Header item 4 link",
+          "value": "#"
+        },
+        {
+          "identifier": "header_item_4_name",
+          "type": "text",
+          "description": "Name for item 4 in the header. leave blank to deactivate",
+          "label": "Header item 4 name",
+          "value": ""
         }
       ]
     },
@@ -532,23 +801,60 @@
             {
               "label": "Photo",
               "value": "photo"
+            },
+            {
+              "label": "No image",
+              "value": "no_image"
             }
           ]
         },
         {
-          "identifier": "cat_style_type",
+          "identifier": "cat_border_type",
           "type": "list",
-          "description": "Standard: Icon, Photo or no image. Dynamic: with image or without",
-          "label": "Category tiles image type",
-          "value": "dynamic_no_icon",
+          "description": "Define the style of category tiles",
+          "label": "Category tile style",
+          "value": "none",
           "options": [
             {
-              "label": "Icon",
-              "value": "icon"
+              "label": "Outline 1",
+              "value": "outline_1"
             },
             {
-              "label": "Photo",
-              "value": "photo"
+              "label": "Box shadow 1",
+              "value": "box_shadow_1"
+            },
+            {
+              "label": "Box shadow 2",
+              "value": "box_shadow_2"
+            },
+            {
+              "label": "Background 1",
+              "value": "background_1"
+            },
+            {
+              "label": "Background 2",
+              "value": "background_2"
+            },
+            {
+              "label": "None",
+              "value": "none"
+            }
+          ]
+        },
+        {
+          "identifier": "cat_title_style",
+          "type": "list",
+          "description": "Choose which font to use for the category tiles",
+          "label": "Tiles title style",
+          "value": "hf",
+          "options": [
+            {
+              "label": "Heading Font",
+              "value": "hf"
+            },
+            {
+              "label": "Text Font",
+              "value": "tf"
             }
           ]
         },
@@ -557,7 +863,14 @@
           "type": "text",
           "description": "Choose the size of the image when using a non dynamic category display",
           "label": "Category image height",
-          "value": "80"
+          "value": "100"
+        },
+        {
+          "identifier": "show_description_cat",
+          "type": "checkbox",
+          "description": "Show description on category titles",
+          "label": "Show category descriptions?",
+          "value": false
         },
         {
           "identifier": "category_title_name",
@@ -565,6 +878,40 @@
           "description": "The title to appear above the categories on the homepage",
           "label": "Category title",
           "value": "Topics"
+        },
+        {
+          "identifier": "category_man_title",
+          "type": "text",
+          "description": "Leave blank if not needed, to be used if you have an uneven number of tiles",
+          "label": "Manual Cat Title",
+          "value": ""
+        },
+        {
+          "identifier": "category_man_title",
+          "type": "text",
+          "description": "Leave blank if not needed, to be used if you have an uneven number of tiles",
+          "label": "Manual Cat Title",
+          "value": "Submit a Request"
+        },
+        {
+          "identifier": "category_man_desc",
+          "type": "text",
+          "description": "This will only show if Category descriptions are enabled",
+          "label": "Manual Cat Description",
+          "value": ""
+        },
+        {
+          "identifier": "category_man_url",
+          "type": "text",
+          "description": "URL of where the link will direct the user",
+          "label": "Manual Cat URL",
+          "value": "/hc/requests/new"
+        },
+        {
+          "identifier": "category_man_image",
+          "type": "file",
+          "description": "Image to represent the category or section. Use WebP, PNG or JPEG",
+          "label": "Category 12 Image"
         },
         {
           "identifier": "category_1_id",
@@ -584,7 +931,7 @@
           "type": "text",
           "description": "ID for category image 2. Can be taken from URL when viewing category",
           "label": "Category ID 2",
-          "value": "9586990042899"
+          "value": "900000057426"
         },
         {
           "identifier": "category_2_image",
@@ -597,7 +944,7 @@
           "type": "text",
           "description": "ID for category image 3. Can be taken from URL when viewing category",
           "label": "Category ID 3",
-          "value": "9586960550931"
+          "value": "900000027746"
         },
         {
           "identifier": "category_3_image",
@@ -610,7 +957,7 @@
           "type": "text",
           "description": "ID for category image 4. Can be taken from URL when viewing category",
           "label": "Category ID 4",
-          "value": "9586909803411"
+          "value": "12023435245209"
         },
         {
           "identifier": "category_4_image",
@@ -623,7 +970,7 @@
           "type": "text",
           "description": "ID for category image 5. Can be taken from URL when viewing category",
           "label": "Category ID 5",
-          "value": "9586896617747"
+          "value": "900000282426"
         },
         {
           "identifier": "category_5_image",
@@ -831,6 +1178,66 @@
           "label": "request_list_beta_label",
           "value": false
         }
+      ]
+    },
+    {
+      "label": "🧪 Advanced Settings",
+      "variables": [
+        {
+          "identifier": "breadcrumb_font_type",
+          "type": "list",
+          "description": "Defines style of breadcrumbs and aside navigation titles",
+          "label": "Capitalization for breadcrumbs",
+          "value": "initial",
+          "options": [
+            {
+              "label": "Uppercase",
+              "value": "uppercase"
+            },
+            {
+              "label": "Default",
+              "value": "initial"
+            }
+          ]
+        },
+        {
+          "identifier": "show_language_selector",
+          "type": "checkbox",
+          "description": "Show the language selector, enabling users to choose the locale",
+          "label": "Show language selector?",
+          "value": true
+        },
+        {
+          "identifier": "use_dc",
+          "type": "checkbox",
+          "description": "Use Dynamic Content for translations text",
+          "label": "Use Dynamic Content",
+          "value": false
+        },
+        {
+          "identifier": "font_size",
+          "type": "text",
+          "description": "Determined in pixels, enter number only",
+          "label": "Font size",
+          "value": "15"
+        },
+        {
+          "identifier": "font_synth",
+          "type": "list",
+          "description": "Determine whether custom fonts obey font-weight",
+          "label": "Font synthesis",
+          "value": "none",
+          "options": [
+            {
+              "label": "Off",
+              "value": "none"
+            },
+            {
+              "label": "On",
+              "value": "weight"
+            }
+          ]
+        }      
       ]
     }
   ]

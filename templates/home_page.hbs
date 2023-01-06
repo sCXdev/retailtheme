@@ -18,12 +18,18 @@ let categoryImages = {
 
 <section id="main-content" class="section hero">
   <div class="hero-inner">
-    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-    </svg>
-    {{search submit=false instant=settings.instant_search class='search search-full'}}
+    <div class="search-house">
+      {{#if settings.hero_text}}
+        <h1>{{#if settings.use_dc}}{{dc settings.hero_text}}{{else}}{{settings.hero_text}}{{/if}}</h1>
+      {{else}}
+        <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+      {{/if}}
+            {{search submit=false instant=settings.instant_search class='search search-full'}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+                <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+                <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+              </svg>
+    </div>
   </div>
 </section>
 
@@ -34,35 +40,64 @@ let categoryImages = {
       <ul class="blocks-list">
         {{#each categories}}
           {{#if ../has_multiple_categories}}
-            <li class="blocks-item">
+            <li class="blocks-item {{../settings.cat_border_type}}">
               <a href='{{url}}' class="blocks-item-link">
+                {{#isnt ../settings.cat_image_type 'no_image'}}
               <div class="cat-overflow" id="cat-image-{{id}}">
-
                   <script>
                     if (categoryImages[{{id}}] != undefined) {
                       document.getElementById(`cat-image-{{id}}`).insertAdjacentHTML('afterbegin', `<img class="cat-image {{../settings.cat_image_type}}" aria-label="An image for the category {{name}}" src="${categoryImages[{{id}}]}">
-                        `)
-                
-                    };
+                        `)};
                   </script>
               </div>
-                <span class="blocks-item-title">{{name}}</span>
+              {{/isnt}}
+                <span class="blocks-item-title {{../settings.cat_title_style}}">{{name}}</span>
+                {{#if ../settings.show_description_cat}}
                 <span class="blocks-item-description">{{excerpt description}}</span>
+                {{/if}}
               </a>
             </li>
           {{else}}
             {{#each sections}}
-              <li class="blocks-item">
+              <li class="blocks-item {{../../settings.cat_border_type}}">
                 <a href='{{url}}' class="blocks-item-link">
-                  <span class="blocks-item-title">
+                  {{#isnt ../../settings.cat_image_type 'no_image'}}
+                  <div class="cat-overflow" id="cat-image-{{id}}">
+                  <script>
+                    if (categoryImages[{{id}}] != undefined) {
+                      document.getElementById(`cat-image-{{id}}`).insertAdjacentHTML('afterbegin', `<img class="cat-image {{../../settings.cat_image_type}}" aria-label="An image for the category {{name}}" src="${categoryImages[{{id}}]}">
+                        `)};
+                  </script>
+              </div>
+              {{/isnt}}
+                  <span class="blocks-item-title {{../../settings.cat_title_style}}">
                     {{name}}
                   </span>
+                  {{#if ../../settings.show_description_cat}}
                   <span class="blocks-item-description">{{excerpt description}}</span>
+                   {{/if}}
                 </a>
               </li>
             {{/each}}
           {{/if}}
         {{/each}}
+        {{#if settings.category_man_title}}
+        <li class="blocks-item {{settings.cat_border_type}}">
+                <a href='{{settings.category_man_url}}' class="blocks-item-link">
+                  {{#isnt settings.cat_image_type 'no_image'}}
+                  <div class="cat-overflow" >                   
+                    <img class="cat-image {{settings.cat_image_type}}" aria-label="{{settings.category_man_title}}" src="{{settings.category_man_image}}">
+              </div>
+              {{/isnt}}
+                  <span class="blocks-item-title {{settings.cat_title_style}}">
+                    {{settings.category_man_title}}
+                  </span>
+                  {{#if settings.show_description_cat}}
+                  <span class="blocks-item-description">{{settings.category_man_desc}}</span>
+                   {{/if}}
+                </a>
+              </li>
+        {{/if}}
       </ul>
       {{pagination}}
     </section>
@@ -72,9 +107,10 @@ let categoryImages = {
         <h2>{{t 'promoted_articles'}}</h2>
         <ul class="article-list promoted-articles">
           {{#each promoted_articles}}
-            <li class="promoted-articles-item">
+            <li class="promoted-articles-item {{../settings.promoted_border_type}}">
                 <a href="{{url}}">
                   {{title}}
+                  <br>
 
                   {{#if internal}}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
