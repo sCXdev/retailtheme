@@ -20,7 +20,7 @@
           "type": "color",
           "description": "brand_text_color_description",
           "label": "brand_text_color_label",
-          "value": "#000000"
+          "value": "#FFFFFF"
         },
         {
           "identifier": "text_color",
@@ -595,7 +595,7 @@
         {
           "identifier": "show_promoted",
           "type": "checkbox",
-          "description": "Define whether promoted articles are displayed on the ",
+          "description": "Define whether promoted articles are displayed on the homepage ",
           "label": "Show promoted Articles",
           "value": true
         },
@@ -631,6 +631,20 @@
               "value": "none"
             }
           ]
+        },        
+        {
+          "identifier": "show_community_tile",
+          "type": "checkbox",
+          "description": "Define whether the community CTA is displayed on the homepage",
+          "label": "Show community CTA",
+          "value": false
+        },
+        {
+          "identifier": "show_faq",
+          "type": "checkbox",
+          "description": "Show FAQ section?",
+          "label": "Show FAQ",
+          "value": true
         }
       ]
     }, 
@@ -1079,7 +1093,7 @@
           "type": "checkbox",
           "description": "articles_in_section_description",
           "label": "articles_in_section_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "show_article_author",
@@ -1122,6 +1136,171 @@
           "description": "article_sharing_description",
           "label": "article_sharing_label",
           "value": true
+        },
+        {
+          "identifier": "show_article_voting_count",
+          "type": "checkbox",
+          "description": "Shows the quantity of votes",
+          "label": "Article vote count",
+          "value": false
+        },
+        {
+          "identifier": "show_submit_request_article",
+          "type": "checkbox",
+          "description": "Show the submit a request link at the bottom of articles",
+          "label": "Show Submit a Request?",
+          "value": false
+        }
+      ]
+    },{
+      "label": "🏠 FAQ Section",
+      "variables": [
+        {
+          "identifier": "faq_title",
+          "type": "text",
+          "description": "Title to appear above FAQ, leave blank to deactivate",
+          "label": "FAQ Name",
+          "value": "Frequently Asked Questions"
+        },
+        {
+          "identifier": "faq_title_1",
+          "type": "text",
+          "description": "Title for FAQ 1 - leave blank to deactivate",
+          "label": "Title 1",
+          "value": "FAQ Title 1"
+        },
+        {
+          "identifier": "faq_content_1",
+          "type": "text",
+          "description": "Content for FAQ 1",
+          "label": "Content 1",
+          "value": "<b>Contrary to popular belief</b>, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. "
+        },
+        {
+          "identifier": "faq_button_title_1",
+          "type": "text",
+          "description": "Title for button for FAQ 1 - leave blank to deactivate",
+          "label": "Button Title 1",
+          "value": "CTA Link"
+        },
+        {
+          "identifier": "faq_button_link_1",
+          "type": "text",
+          "description": "Link for button for FAQ 1. URL link must start with http",
+          "label": "Button Link 1",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "faq_title_2",
+          "type": "text",
+          "description": "Title for FAQ 2 - leave blank to deactivate",
+          "label": "Title 2",
+          "value": "FAQ Title 2"
+        },
+        {
+          "identifier": "faq_content_2",
+          "type": "text",
+          "description": "Content for FAQ 2",
+          "label": "Content 2",
+          "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. "
+        },
+        {
+          "identifier": "faq_button_title_2",
+          "type": "text",
+          "description": "Title for button for FAQ 2 - leave blank to deactivate",
+          "label": "Button Title 2",
+          "value": "CTA Link"
+        },
+        {
+          "identifier": "faq_button_link_2",
+          "type": "text",
+          "description": "Link for button for FAQ 2. URL link must start with http",
+          "label": "Button Link 2",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "faq_title_3",
+          "type": "text",
+          "description": "Title for FAQ 3 - leave blank to deactivate",
+          "label": "Title 3",
+          "value": "FAQ Title 3"
+        },
+        {
+          "identifier": "faq_content_3",
+          "type": "text",
+          "description": "Content for FAQ 3",
+          "label": "Content 3",
+          "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. "
+        },
+        {
+          "identifier": "faq_button_title_3",
+          "type": "text",
+          "description": "Title for button for FAQ 3 - leave blank to deactivate",
+          "label": "Button Title 3",
+          "value": "CTA Link"
+        },
+        {
+          "identifier": "faq_button_link_3",
+          "type": "text",
+          "description": "Link for button for FAQ 3. URL link must start with http",
+          "label": "Button Link 3",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "faq_title_4",
+          "type": "text",
+          "description": "Title for FAQ 4 - leave blank to deactivate",
+          "label": "Title 4",
+          "value": "FAQ Title 4"
+        },
+        {
+          "identifier": "faq_content_4",
+          "type": "text",
+          "description": "Content for FAQ 4",
+          "label": "Content 4",
+          "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical <a href=\"#\">literature</a>, discovered the undoubtable source. "
+        },
+        {
+          "identifier": "faq_button_title_4",
+          "type": "text",
+          "description": "Title for button for FAQ 4 - leave blank to deactivate",
+          "label": "Button Title 4",
+          "value": "CTA Link"
+        },
+        {
+          "identifier": "faq_button_link_4",
+          "type": "text",
+          "description": "Link for button for FAQ 4. URL link must start with http",
+          "label": "Button Link 4",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "faq_title_5",
+          "type": "text",
+          "description": "Title for FAQ 5 - leave blank to deactivate",
+          "label": "Title 5",
+          "value": "FAQ Title 5"
+        },
+        {
+          "identifier": "faq_content_5",
+          "type": "text",
+          "description": "Content for FAQ 5",
+          "label": "Content 5",
+          "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 55 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical <a href=\"#\">literature</a>, discovered the undoubtable source. "
+        },
+        {
+          "identifier": "faq_button_title_5",
+          "type": "text",
+          "description": "Title for button for FAQ 5 - leave blank to deactivate",
+          "label": "Button Title 5",
+          "value": "CTA Link"
+        },
+        {
+          "identifier": "faq_button_link_5",
+          "type": "text",
+          "description": "Link for button for FAQ 5. URL link must start with http",
+          "label": "Button Link 5",
+          "value": "https://www.google.com"
         }
       ]
     },

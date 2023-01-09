@@ -229,11 +229,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media (min-width: 1024px) {
   body > main {
-    min-height: 65vh;
+    min-height: 82vh;
   }
-}
 
 h1,
 h2,
@@ -770,6 +768,10 @@ ul {
 }
 
 /***** Header *****/
+
+.header-outer {
+  background-color: $header_bg_color;
+}
 .header {
   max-width: 1160px;
   margin: 0 auto;
@@ -779,7 +781,6 @@ ul {
   display: flex;
   height: 71px;
   justify-content: space-between;
-  background-color: $header_bg_color;
   font-weight: 600;
 }
 
@@ -1610,11 +1611,7 @@ ul {
   margin-bottom: 40px;
 }
 
-@media (min-width: 768px) {
-  .section {
-    margin-bottom: 60px;
-  }
-}
+
 
 .home-section h2 {
   margin-bottom: 10px;
@@ -1625,6 +1622,7 @@ ul {
 .promoted-articles {
   display: grid;
   gap: 10px;
+  margin-bottom: 60px;
 }
 @media (min-width: 480px) {
   .promoted-articles {
@@ -1977,7 +1975,13 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 40px;
-  margin-top: 20px;
+}
+
+.article-header .breadcrumbs,
+.category-content .breadcrumbs,
+main .breadcrumbs {
+  margin-bottom: 30px;
+  display: block;
 }
 
 @media (min-width: 768px) {
@@ -2134,7 +2138,10 @@ ul {
   margin-bottom: 20px;
   padding: 0;
 }
-
+.article-sidebar.no-side {
+  border: 0;
+  margin: 0;
+}
 @media (min-width: 1024px) {
   .article-sidebar {
     border: 0;
@@ -2174,7 +2181,7 @@ ul {
 }
 
 .article-votes {
-  border-top: 1px solid $border_color;
+  border: 1px solid $border_color;
   padding: 30px 0;
   text-align: center;
 }
@@ -2200,7 +2207,7 @@ ul {
 }
 
 .article-return-to-top {
-  border-top: 1px solid #87929D;
+  //border-top: 1px solid $border_color;
 }
 
 @media (min-width: 1024px) {
@@ -2220,7 +2227,7 @@ ul {
 }
 
 .article-return-to-top-icon {
-  transform: rotate(0.5turn);
+  transform: rotate(0.5turn) translateY(-5px);
 }
 
 .article td > p:first-child,
@@ -5396,3 +5403,110 @@ html[dir="rtl"] .notification-left-aligned {
   font-family: $heading_font;
   text-transform: uppercase;
 }
+/* 
+Home page accordion
+ */
+ .panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-bottom: 1px solid $border_color;
+}
+
+.faq .panel a.button,
+.cta-button  {
+  margin-bottom: 30px;
+  background: $button_bg_color;
+  border-radius:  #{$border_radius}px;
+  border: 2px solid $button_bg_color;
+  color: $button_text_color;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+  width: max-content;
+  font-family: $heading_font;
+}
+.faq .panel a.button:hover,
+.faq .panel a.button:active,
+.faq .panel a.button:focus {
+  background: $brand_color;
+  border-color: $brand_color;
+}
+.cta-button:hover,
+.cta-button:active,
+.cta-button:focus {
+  transform: translate(-3px,-3px);
+}
+
+.panel[aria-hidden="true"] a  {
+  visibility: hidden;
+}
+
+.panel[aria-hidden="false"] a  {
+  visibility:visible;
+}
+
+
+button.accordion {
+  color: $brand_color;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 20px 0;
+  color: $brand_color;
+}
+
+button.accordion:hover,
+button.accordion:active,
+button.accordion:focus {
+  text-underline-offset: 2px;
+  text-decoration-color: $brand_color;
+  text-decoration-thickness: 3px;
+}
+button.accordion span {
+  color: $text_color;
+  font-size: 18px;
+  max-width: 93%;
+  text-align: initial;
+}
+
+.faq {
+  border-radius: #{$border_radius}px;
+  margin-bottom: 60px;
+}
+
+.faq.color-boxing {
+  padding: 15px;
+  background-color: $background_color;
+}
+
+.faq .panel-house:last-child .panel {
+  border-bottom: none;
+}
+.faq-body {
+  color: $text_color;
+}
+button.accordion div svg {
+  width: 12px;
+  height: 12px;
+  display: none;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+button.accordion:hover span,
+button.accordion:active span,
+button.accordion:focus {
+  text-decoration: underline;
+  text-decoration-color: $brand_color;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+} 
+button.accordion[aria-expanded="false"] .acc-plus svg {
+  display: inline-block;
+}
+
+button.accordion[aria-expanded="true"] .acc-minus svg {
+  display: inline-block;
+    }

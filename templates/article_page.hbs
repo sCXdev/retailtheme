@@ -1,18 +1,39 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
+<section id="main-content" class="section hero">
+  <div class="hero-inner">
+    <div class="search-house">
+      {{#if settings.hero_text}}
+        <h1>{{#if settings.use_dc}}{{dc settings.hero_text}}{{else}}{{settings.hero_text}}{{/if}}</h1>
+      {{else}}
+        <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+      {{/if}}
+            {{search submit=false instant=settings.instant_search class='search search-full'}}
+            {{#if settings.search_text}}
+              {{#if settings.use_dc}}
+              <script>document.getElementById("query").placeholder = "{{dc settings.search_text}}";</script>
+              {{else}}
+                <script>document.getElementById("query").placeholder = "{{settings.search_text}}";</script>
+                 {{/if}}
+              {{/if}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+                <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+                <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+              </svg>
+    </div>
+  </div>
+</section><div class="container">
+  {{!-- <nav class="sub-nav">
+    {{!breadcrumbs}}
     <div class="search-container">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
         <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
         <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
       </svg>
-      {{search scoped=settings.scoped_kb_search submit=false}}
+      {{!search scoped=settings.scoped_kb_search submit=false}}
     </div>
-  </nav>
+  </nav> --}}
 
   <div class="article-container" id="article-container">
-    <aside class="article-sidebar" aria-labelledby="section-articles-title">
+    <aside class="article-sidebar {{#if settings.show_articles_in_section}}{{else}}no-side{{/if}}" aria-labelledby="section-articles-title">
       {{#if settings.show_articles_in_section}}
         <div class="collapsible-sidebar">
           <button type="button" class="collapsible-sidebar-toggle" aria-labelledby="section-articles-title" aria-expanded="false">
@@ -44,6 +65,7 @@
 
     <article id="main-content" class="article">
       <header class="article-header">
+                {{breadcrumbs}}
         <h1 title="{{article.title}}" class="article-title">
           {{article.title}}
           {{#if article.internal}}
@@ -153,15 +175,19 @@
               {{vote 'up' role='radio' class='button article-vote article-vote-up' selected_class="button-primary"}}
               {{vote 'down' role='radio' class='button article-vote article-vote-down' selected_class="button-primary"}}
             </div>
+            {{#if ../settings.show_article_voting_count}}
             <small class="article-votes-count">
               {{vote 'label' class='article-vote-label'}}
             </small>
+            {{/if}}
           </div>
         {{/with}}
 
-        <div class="article-more-questions">
-          {{request_callout}}
-        </div>
+        {{#if settings.show_submit_request_article}}
+          <div class="article-more-questions">
+            {{request_callout}}
+          </div>
+        {{/if}}
         <div class="article-return-to-top">
           <a href="#article-container">
             {{t 'return_to_top'}}

@@ -25,6 +25,13 @@ let categoryImages = {
         <h2 class="visibility-hidden">{{ t 'search' }}</h2>
       {{/if}}
             {{search submit=false instant=settings.instant_search class='search search-full'}}
+            {{#if settings.search_text}}
+              {{#if settings.use_dc}}
+              <script>document.getElementById("query").placeholder = "{{dc settings.search_text}}";</script>
+              {{else}}
+                <script>document.getElementById("query").placeholder = "{{settings.search_text}}";</script>
+                 {{/if}}
+              {{/if}}
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
                 <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
                 <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
@@ -125,7 +132,170 @@ let categoryImages = {
       </section>
     {{/if}}
   </section>
+{{#if settings.show_faq}}
+  <section class="section">
+    {{#if settings.faq_title}}
+    <h2 class="heading-home">
+      {{#if settings.use_dc}}{{dc settings.faq_title}}{{else}}{{settings.faq_title}}{{/if}}</h2>
+    {{/if}}
+    <div class="faq">
 
+      {{#if settings.faq_title_1}}
+      <div class="panel-house">
+        <button class="accordion" aria-expanded="false"><span>
+          {{#if settings.use_dc}}{{dc settings.faq_title_1}}{{else}}{{settings.faq_title_1}}{{/if}}
+          </span>
+        <div class="acc-button">
+          <div class="acc-plus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+          <div class="acc-minus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+        </button>
+        <div class="panel" aria-hidden="true">
+          <p class="faq-body">
+            {{#if settings.use_dc}}{{dc settings.faq_content_1}}{{else}}{{settings.faq_content_1}}{{/if}}
+            </p>
+          {{#if settings.faq_button_title_1}}
+          <a href="{{settings.faq_button_link_1}}" class="button button-primary"
+            title="{{settings.faq_button_title_1}}">
+            {{#if settings.use_dc}}{{dc settings.faq_button_title_1}}{{else}}{{settings.faq_button_title_1}}{{/if}}
+          </a>
+          {{/if}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if settings.faq_title_2}}
+      <div class="panel-house">
+        <button class="accordion" aria-expanded="false"><span>
+          {{#if settings.use_dc}}{{dc settings.faq_title_2}}{{else}}{{settings.faq_title_2}}{{/if}}
+          </span>
+        <div class="acc-button">
+          <div class="acc-plus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+          <div class="acc-minus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+        </button>
+        <div class="panel" aria-hidden="true">
+          <p class="faq-body">
+            {{#if settings.use_dc}}{{dc settings.faq_content_2}}{{else}}{{settings.faq_content_2}}{{/if}}
+            </p>
+          {{#if settings.faq_button_title_2}}
+          <a href="{{settings.faq_button_link_2}}" class="button button-primary"
+            title="{{settings.faq_button_title_2}}">
+            {{#if settings.use_dc}}{{dc settings.faq_button_title_2}}{{else}}{{settings.faq_button_title_2}}{{/if}}
+          </a>
+          {{/if}}
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if settings.faq_title_3}}
+      <div class="panel-house">
+        <button class="accordion" aria-expanded="false"><span>
+          {{#if settings.use_dc}}{{dc settings.faq_title_3}}{{else}}{{settings.faq_title_3}}{{/if}}
+          </span>
+        <div class="acc-button">
+          <div class="acc-plus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+          <div class="acc-minus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+        </button>
+        <div class="panel" aria-hidden="true">
+          <p class="faq-body">
+            {{#if settings.use_dc}}{{dc settings.faq_content_3}}{{else}}{{settings.faq_content_3}}{{/if}}
+            </p>
+          {{#if settings.faq_button_title_3}}
+          <a href="{{settings.faq_button_link_3}}" class="button button-primary"
+            title="{{settings.faq_button_title_3}}">
+            {{#if settings.use_dc}}{{dc settings.faq_button_title_3}}{{else}}{{settings.faq_button_title_3}}{{/if}}
+          </a>
+          {{/if}}
+        </div>
+      </div>
+      {{/if}}
+            {{#if settings.faq_title_4}}
+      <div class="panel-house">
+        <button class="accordion" aria-expanded="false"><span>
+          {{#if settings.use_dc}}{{dc settings.faq_title_4}}{{else}}{{settings.faq_title_4}}{{/if}}
+          </span>
+        <div class="acc-button">
+          <div class="acc-plus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+          <div class="acc-minus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+        </button>
+        <div class="panel" aria-hidden="true">
+          <p class="faq-body">
+            {{#if settings.use_dc}}{{dc settings.faq_content_4}}{{else}}{{settings.faq_content_4}}{{/if}}
+            </p>
+          {{#if settings.faq_button_title_4}}
+          <a href="{{settings.faq_button_link_4}}" class="button button-primary"
+            title="{{settings.faq_button_title_4}}">
+            {{#if settings.use_dc}}{{dc settings.faq_button_title_4}}{{else}}{{settings.faq_button_title_4}}{{/if}}
+          </a>
+          {{/if}}
+        </div>
+      </div>
+      {{/if}}
+            {{#if settings.faq_title_5}}
+      <div class="panel-house">
+        <button class="accordion" aria-expanded="false"><span>
+          {{#if settings.use_dc}}{{dc settings.faq_title_5}}{{else}}{{settings.faq_title_5}}{{/if}}
+          </span>
+        <div class="acc-button">
+          <div class="acc-plus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+          <div class="acc-minus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+        </button>
+        <div class="panel" aria-hidden="true">
+          <p class="faq-body">
+            {{#if settings.use_dc}}{{dc settings.faq_content_5}}{{else}}{{settings.faq_content_5}}{{/if}}
+            </p>
+          {{#if settings.faq_button_title_5}}
+          <a href="{{settings.faq_button_link_5}}" class="button button-primary"
+            title="{{settings.faq_button_title_5}}">
+            {{#if settings.use_dc}}{{dc settings.faq_button_title_5}}{{else}}{{settings.faq_button_title_5}}{{/if}}
+          </a>
+          {{/if}}
+        </div>
+      </div>
+      {{/if}}
+    </div>
+</section>
+{{/if}}
+  {{#if settings.show_community_tile}}
   {{#if help_center.community_enabled}}
     <section class="section home-section community">
       <h2>{{t 'community'}}</h2>
@@ -136,10 +306,39 @@ let categoryImages = {
       <div class="community-image"></div>
     </section>
   {{/if}}
-
+  {{/if}}
   <section class="section home-section activity">
     {{#if settings.show_recent_activity}}
       {{recent_activity}}
     {{/if}}
   </section>
-</div>
+</div><script>
+  if ({{settings.show_faq}}) {
+    var acc = document.getElementsByClassName("accordion");
+    var faqB = document.getElementsByClassName("faq-body");
+    var i; 
+    let convertString = (selectElement) => {
+        let getText = selectElement.textContent;
+        selectElement.textContent = "";
+        selectElement.innerHTML = getText;
+    };
+ for (i = 0; i < faqB.length; i++) { 
+  convertString(faqB[i])
+ }
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.setAttribute("aria-hidden", true);
+          this.setAttribute("aria-expanded", false);
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          this.setAttribute("aria-expanded", true);
+          panel.setAttribute("aria-hidden", false);
+        }
+      });
+    }
+  }
+</script>
