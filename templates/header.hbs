@@ -4,7 +4,7 @@
   <div class="logo">
     {{#link 'help_center'}}
       <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
-      {{#if settings.show_brand_name}}
+      {{#if settings.header_logo_name}}
         <span aria-hidden="true">{{help_center.name}}</span>
       {{/if}}
     {{/link}}
@@ -14,14 +14,24 @@
     <nav class="user-nav" id="user-nav">
       <ul class="user-nav-list">
         <li>{{link 'community'}}</li>
+        {{#if settings.header_submit_request}}
         <li>{{link 'new_request' class='submit-a-request'}}</li>
+        {{/if}}
         {{#unless signed_in}}
+        {{#if settings.header_sign_in}}
           <li>
             {{#link "sign_in" class="sign-in"}}
               {{t 'sign_in'}}
             {{/link}}
           </li>
+        {{/if}}
         {{/unless}}
+        {{#if settings.header_return_on}}
+          <li>
+            <a href="{{settings.header_return_link}}" class="return-to">
+              {{#if settings.use_dc}}{{dc settings.header_return_name}}{{else}}{{settings.header_return_name}}{{/if}}</a>
+          </li>
+        {{/if}}
       </ul>
     </nav>
     {{#if signed_in}}
@@ -55,7 +65,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
         <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
       </svg>
-      <svg  height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg" class="icon-menu icon-close"><path d="m4.59 59.41a2 2 0 0 0 2.83 0l24.58-24.58 24.59 24.58a2 2 0 0 0 2.83-2.83l-24.59-24.58 24.58-24.59a2 2 0 0 0 -2.83-2.83l-24.58 24.59-24.59-24.58a2 2 0 0 0 -2.82 2.82l24.58 24.59-24.58 24.59a2 2 0 0 0 0 2.82z"/></svg>
+      <svg  height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg" class="icon-menu icon-close" fill="currentColor"><path d="m4.59 59.41a2 2 0 0 0 2.83 0l24.58-24.58 24.59 24.58a2 2 0 0 0 2.83-2.83l-24.59-24.58 24.58-24.59a2 2 0 0 0 -2.83-2.83l-24.58 24.59-24.59-24.58a2 2 0 0 0 -2.82 2.82l24.58 24.59-24.58 24.59a2 2 0 0 0 0 2.82z"/></svg>
     </button>
     <nav class="menu-list-mobile" id="user-nav-mobile" aria-expanded="false">
       <ul class="menu-list-mobile-items">
@@ -75,19 +85,28 @@
           <li class="item">{{change_password role="menuitem" class='change-password'}}</li>
           <li class="nav-divider"></li>
         {{else}}
+                {{#if settings.header_sign_in}}
           <li class="item">
             {{#link "sign_in" role="menuitem"}}
               {{t 'sign_in'}}
             {{/link}}
           </li>
-          <li class="nav-divider"></li>
+        {{/if}}
         {{/if}}
         <li class="item">{{link 'community' role="menuitem"}}</li>
+        {{#if settings.header_submit_request}}
         <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
-        <li class="nav-divider"></li>
+        {{/if}}
+
         {{#if signed_in}}
           <li class="item">
             {{link "sign_out" role="menuitem"}}
+          </li>
+        {{/if}}
+                {{#if settings.header_return_on}}
+          <li class="item">
+            <a href="{{settings.header_return_link}}" class="return-to">
+              {{#if settings.use_dc}}{{dc settings.header_return_name}}{{else}}{{settings.header_return_name}}{{/if}}</a>
           </li>
         {{/if}}
         </li>

@@ -34,7 +34,7 @@
           "type": "color",
           "description": "link_color_description",
           "label": "link_color_label",
-          "value": "#000000"
+          "value": "#646363"
         },
         {
           "identifier": "hover_link_color",
@@ -55,7 +55,7 @@
           "type": "color",
           "description": "The color of the border to be used on lines and blocks",
           "label": "Border color",
-          "value": "#f2f2f2"
+          "value": "#D1D1D1"
         },
         {
           "identifier": "header_bg_color",
@@ -475,13 +475,6 @@
           "label": "logo_label"
         },
         {
-          "identifier": "show_brand_name",
-          "type": "checkbox",
-          "description": "show_brand_name_description",
-          "label": "show_brand_name_label",
-          "value": true
-        },
-        {
           "identifier": "favicon",
           "type": "file",
           "description": "favicon_description",
@@ -695,7 +688,7 @@
           "type": "checkbox",
           "description": "Show the help centre name next to the left hand logo",
           "label": "Show help center name?",
-          "value": true
+          "value": false
         },
         {
           "identifier": "header_sign_in",
@@ -730,7 +723,7 @@
           "type": "color",
           "description": "Border color for elements within the page",
           "label": "Header return to color",
-          "value": "#1B3577"
+          "value": "#FFFFFF"
         },
         {
           "identifier": "header_submit_request",
@@ -738,63 +731,6 @@
           "description": "Enable a submit a request link",
           "label": "Header submit a request",
           "value": true
-        },
-        {
-          "identifier": "header_item_1_link",
-          "type": "text",
-          "description": "Link for item 1 in the header",
-          "label": "Header item 1 link",
-          "value": "/hc/"
-        },
-        {
-          "identifier": "header_item_1_name",
-          "type": "text",
-          "description": "Name for item 1 in the header. leave blank to deactivate",
-          "label": "Header item 1 name",
-          "value": "Link 1"
-        },
-        {
-          "identifier": "header_item_2_link",
-          "type": "text",
-          "description": "Link for item 2 in the header",
-          "label": "Header item 2 link",
-          "value": "/hc/"
-        },
-        {
-          "identifier": "header_item_2_name",
-          "type": "text",
-          "description": "Name for item 2 in the header. leave blank to deactivate",
-          "label": "Header item 2 name",
-          "value": "Link 2"
-        },
-        {
-          "identifier": "header_item_3_link",
-          "type": "text",
-          "description": "Link for item 3 in the header",
-          "label": "Header item 3 link",
-          "value": "#"
-        },
-        {
-          "identifier": "header_item_3_name",
-          "type": "text",
-          "description": "Name for item 3 in the header. leave blank to deactivate",
-          "label": "Header item 3 name",
-          "value": "Link 3"
-        }
-        ,
-        {
-          "identifier": "header_item_4_link",
-          "type": "text",
-          "description": "Link for item 4 in the header",
-          "label": "Header item 4 link",
-          "value": "#"
-        },
-        {
-          "identifier": "header_item_4_name",
-          "type": "text",
-          "description": "Name for item 4 in the header. leave blank to deactivate",
-          "label": "Header item 4 name",
-          "value": ""
         }
       ]
     },

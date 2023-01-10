@@ -32,7 +32,7 @@
     </div>
   </nav> --}}
 
-  <div class="article-container" id="article-container">
+  <div class="article-container {{#if settings.show_articles_in_section}}{{else}}no-side{{/if}}" id="article-container">
     <aside class="article-sidebar {{#if settings.show_articles_in_section}}{{else}}no-side{{/if}}" aria-labelledby="section-articles-title">
       {{#if settings.show_articles_in_section}}
         <div class="collapsible-sidebar">

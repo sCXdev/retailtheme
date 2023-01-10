@@ -33,12 +33,25 @@
         {{/if}}
       </header>
 
-      <div id="main-content" class="section-tree">
-        {{#each sections}}
-          <section class="section">
-            <h2 class="section-tree-title">
-              <a href="{{url}}">{{name}}</a>
-            </h2>
+      <div class="faq">
+         {{#each sections}}
+      <div class="panel-house">
+        <button class="accordion" aria-expanded="false"><span>
+          {{name}}
+          </span>
+        <div class="acc-button">
+          <div class="acc-plus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+          <div class="acc-minus">
+            <svg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'>
+            <path fill-rule='evenodd' d='M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z' clip-rule='evenodd'/>
+            </svg>
+          </div>
+        </button>
+        <div class="panel" aria-hidden="true">
             {{#if articles}}
               <ul class="article-list">
                 {{#each articles}}
@@ -64,13 +77,40 @@
                 </a>
               {{/if}}
             {{/if}}
-          </section>
-        {{else}}
-          <i class="category-empty">
-            <a href="{{category.url}}">{{t 'empty'}}</a>
-          </i>
+        </div>
+      </div>
         {{/each}}
       </div>
     </div>
   </div>
 </div>
+<script>
+  if ({{settings.show_faq}}) {
+    var acc = document.getElementsByClassName("accordion");
+    var faqB = document.getElementsByClassName("faq-body");
+    var i; 
+    let convertString = (selectElement) => {
+        let getText = selectElement.textContent;
+        selectElement.textContent = "";
+        selectElement.innerHTML = getText;
+    };
+ for (i = 0; i < faqB.length; i++) { 
+  convertString(faqB[i])
+ }
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.setAttribute("aria-hidden", true);
+          this.setAttribute("aria-expanded", false);
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          this.setAttribute("aria-expanded", true);
+          panel.setAttribute("aria-hidden", false);
+        }
+      });
+    }
+  }
+</script>
