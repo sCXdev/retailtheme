@@ -34,3 +34,10 @@
     {{request_form wysiwyg=true}}
   </div>
 </div>
+{{#if settings.hide_cta_request}}
+<style>
+  .footer-cta-wrap {
+    display: none!important;
+  }
+</style>
+{{/if}}
