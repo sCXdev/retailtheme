@@ -670,19 +670,19 @@
           "options": [
             {
               "label": "header_tf_standard",
-              "value": "Standard font: Standard Case"
+              "value": "Standard font, standard case"
             },
             {
               "label": "header_tf_uppercase",
-              "value": "Standard font: Uppercase"
+              "value": "Standard font, uppercase"
             },
             {
               "label": "header_hf_standard",
-              "value": "Heading font: Standard Case"
+              "value": "Heading font, standard Case"
             },
             {
               "label": "header_hf_uppercase",
-              "value": "Heading font: Uppercase"
+              "value": "Heading font, uppercase"
             }
           ]
         },
