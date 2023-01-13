@@ -1053,13 +1053,6 @@
           "type": "text",
           "description": "Leave blank if not needed, to be used if you have an uneven number of tiles",
           "label": "Manual Cat Title",
-          "value": ""
-        },
-        {
-          "identifier": "category_man_title",
-          "type": "text",
-          "description": "Leave blank if not needed, to be used if you have an uneven number of tiles",
-          "label": "Manual Cat Title",
           "value": "Submit a Request"
         },
         {
