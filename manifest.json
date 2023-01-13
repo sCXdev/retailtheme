@@ -669,20 +669,20 @@
           "value": "header_hf_standard",
           "options": [
             {
-              "label": "header_tf_standard",
-              "value": "Standard font, standard case"
+              "label": "Standard font, standard case",
+              "value": "header_tf_standard"
             },
             {
-              "label": "header_tf_uppercase",
-              "value": "Standard font, uppercase"
+              "label": "Standard font, upper case",
+              "value": "header_tf_uppercase"
             },
             {
-              "label": "header_hf_standard",
-              "value": "Heading font, standard Case"
+              "label": "Header font, standard case",
+              "value": "header_hf_standard"
             },
             {
-              "label": "header_hf_uppercase",
-              "value": "Heading font, uppercase"
+              "label": "Header font, upper case",
+              "value": "header_hf_uppercase"
             }
           ]
         },
