@@ -48,6 +48,7 @@ body {
 
 main {
   display: block;
+  padding-bottom: 60px;
 }
 
 h1 {
@@ -851,7 +852,7 @@ ul {
   border: 1px solid $header_return_color;
   padding: 10px 15px;
   height: auto;
-  margin-left: 10px;
+  //margin-left: 10px;
 }
 .user-nav-list a.return-to:hover,
 .user-nav-list a.return-to:focus,
@@ -867,8 +868,10 @@ ul {
 }
 
 .user-nav-list {
-  display: block;
+  display: flex;
   list-style: none;
+  align-items: center;
+  gap: 10px;
 }
 
 .user-nav-list > li {
@@ -898,7 +901,7 @@ ul {
   color: $header_text_color;
   display: none;
   font-size: 14px;
-  padding: 0 20px 0 0;
+  // padding: 0 20px 0 0;
   width: auto;
 }
 
@@ -1942,7 +1945,7 @@ zd-autocomplete-multibrand {
 .recent-activity-item {
   border-bottom: 1px solid $border_color;
   overflow: auto;
-  padding: 20px 0;
+  padding: 20px 10px;
 
 }
 .recent-activity-item h3 {
@@ -5456,6 +5459,7 @@ html[dir="rtl"] .notification-left-aligned {
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-left: 10px;
 }
 
 .dropdown-toggle {
@@ -5729,6 +5733,10 @@ button.accordion {
   padding: 20px 10px;
   color: $brand_color;
   border-top: 1px solid $border_color;
+}
+
+.faq > div:nth-child(1) > button {
+  border-top: 0px;
 }
 
 button.accordion:hover,

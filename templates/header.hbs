@@ -13,7 +13,15 @@
   <div class="nav-wrapper-desktop">
     <nav class="user-nav" id="user-nav">
       <ul class="user-nav-list">
+        {{#if settings.header_community}}
         <li>{{link 'community'}}</li>
+         {{/if}}
+        {{#if settings.header_return_on}}
+          <li>
+            <a href="{{settings.header_return_link}}" class="return-to">
+              {{#if settings.use_dc}}{{dc settings.header_return_name}}{{else}}{{settings.header_return_name}}{{/if}}</a>
+          </li>
+        {{/if}}
         {{#if settings.header_submit_request}}
         <li>{{link 'new_request' class='submit-a-request'}}</li>
         {{/if}}
@@ -26,12 +34,6 @@
           </li>
         {{/if}}
         {{/unless}}
-        {{#if settings.header_return_on}}
-          <li>
-            <a href="{{settings.header_return_link}}" class="return-to">
-              {{#if settings.use_dc}}{{dc settings.header_return_name}}{{else}}{{settings.header_return_name}}{{/if}}</a>
-          </li>
-        {{/if}}
       </ul>
     </nav>
     {{#if signed_in}}
@@ -93,7 +95,8 @@
           </li>
         {{/if}}
         {{/if}}
-        <li class="item">{{link 'community' role="menuitem"}}</li>
+        {{#if settings.header_community}}
+        <li class="item">{{link 'community' role="menuitem"}}</li>{{/if}}
         {{#if settings.header_submit_request}}
         <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
         {{/if}}
