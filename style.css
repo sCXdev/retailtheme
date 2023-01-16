@@ -2245,7 +2245,7 @@ zd-autocomplete-multibrand {
 .article-header .breadcrumbs,
 .category-content .breadcrumbs,
 main .breadcrumbs {
-  // margin-bottom: 30px;
+  margin-bottom: 30px;
   display: block;
 }
 
@@ -5236,11 +5236,12 @@ main .breadcrumbs {
 }
 
 .search-results .no-results .action-prompt a {
-  color: #1F73B7;
+  color: $link_color;
+  font-weight: 800;
 }
 
 .search-results .no-results .action-prompt a:visited {
-  color: #1F73B7;
+  color: $link_color;
 }
 
 .search-result-title {
