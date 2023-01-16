@@ -2245,7 +2245,7 @@ zd-autocomplete-multibrand {
 .article-header .breadcrumbs,
 .category-content .breadcrumbs,
 main .breadcrumbs {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   display: block;
 }
 
@@ -5158,6 +5158,10 @@ main .breadcrumbs {
   margin-bottom: 0;
 }
 
+.search-results-list > li h2 a {
+  color: $text_color;
+}
+
 .search-results .meta-group {
   display: block;
   align-items: center;
@@ -5583,10 +5587,13 @@ html[dir="rtl"] .notification-left-aligned {
   vertical-align: middle;
 }
 
-.content-tags > p {
-  color: #68737D;
+.content-tags > h4 {
+  color: $text_color;
   margin-top: 32px;
   margin-bottom: 4px;
+  font-family: $heading_font;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .content-tags-add-hint {
@@ -5598,16 +5605,29 @@ html[dir="rtl"] .notification-left-aligned {
   display: flex;
   flex-wrap: wrap;
   word-break: break-word;
+  gap: 5px;
 }
 
 .content-tag-list li {
-  border-right: 1px solid #C2C8CC;
+  //border-right: 1px solid #C2C8CC;
   margin-bottom: 4px;
 }
 
+.content-tag-list li a {
+  border: 1px solid $border_color;
+  color: $link_color;
+  border-radius: #{$border_radius}px;
+  padding: 8px 15px;
+}
+
+.content-tag-list li a:hover {
+  border-color: $text_color;
+  text-decoration: none;
+}
+
 [dir="ltr"] .content-tag-list li {
-  padding-right: 8px;
-  margin-right: 8px;
+
+  //margin: 8px;
 }
 
 [dir="rtl"] .content-tag-list li {
