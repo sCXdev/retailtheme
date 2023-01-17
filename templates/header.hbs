@@ -23,7 +23,12 @@
           </li>
         {{/if}}
         {{#if settings.header_submit_request}}
-        <li>{{link 'new_request' class='submit-a-request'}}</li>
+        <li>{{#if settings.request_page_title}}
+    {{#if settings.use_dc}}{{dc settings.request_page_title}}{{else}}{{settings.request_page_title}}{{/if}}{{else}}
+    {{link 'new_request' class='submit-a-request'}}{{/if}}
+          
+          
+          </li>
         {{/if}}
         {{#unless signed_in}}
         {{#if settings.header_sign_in}}
@@ -117,7 +122,9 @@
         {{#if settings.header_community}}
         <li class="item">{{link 'community' role="menuitem"}}</li>{{/if}}
         {{#if settings.header_submit_request}}
-        <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
+        <li class="item">{{#if settings.request_page_title}}
+    {{#if settings.use_dc}}{{dc settings.request_page_title}}{{else}}{{settings.request_page_title}}{{/if}}{{else}}
+    {{link 'new_request' role="menuitem" class='submit-a-request'}}{{/if}}</li>
         {{/if}}
 
         {{#if signed_in}}
