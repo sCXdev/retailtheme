@@ -122,8 +122,16 @@
         {{#if settings.header_community}}
         <li class="item">{{link 'community' role="menuitem"}}</li>{{/if}}
         {{#if settings.header_submit_request}}
-        <li class="item">{{#if settings.request_page_title}}
-    {{#if settings.use_dc}}{{dc settings.request_page_title}}{{else}}{{settings.request_page_title}}{{/if}}{{else}}
+        <li class="item">
+          {{#if settings.request_page_title}}
+          <a href="/hc/requests/new">
+            {{#if settings.use_dc}}
+              {{dc settings.request_page_title}}
+            {{else}}
+            {{settings.request_page_title}}
+            {{/if}}
+            </a>
+            {{else}}
     {{link 'new_request' role="menuitem" class='submit-a-request'}}{{/if}}</li>
         {{/if}}
 

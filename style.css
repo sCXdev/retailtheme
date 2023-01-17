@@ -872,6 +872,7 @@ ul {
   list-style: none;
   align-items: center;
   gap: 10px;
+  color: $header_text_color;
 }
 
 .user-nav-list > li {
