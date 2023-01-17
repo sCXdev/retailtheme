@@ -21,14 +21,27 @@
     </div>
   </div>
 </section>
-<div class="container">
+<div class="container article">
  {{breadcrumbs}}
-  <h1>
-    {{t 'submit_a_request'}}
+  <h1 class="{{#if settings.request_page_information}}no-margin{{/if}}">{{#if settings.request_page_title}}
+    {{#if settings.use_dc}}{{dc settings.request_page_title}}{{else}}{{settings.request_page_title}}{{/if}}{{else}}
+    {{t 'submit_a_request'}}{{/if}}
     <span class="follow-up-hint">
       {{follow_up}}
     </span>
   </h1>
+    {{#if settings.request_page_information}}
+  <div id="request-info" style="display:none">
+    {{#if settings.use_dc}}{{dc settings.request_page_information}}{{else}}{{settings.request_page_information}}{{/if}}
+  </div>
+  <script>
+    let infoPanel = document.getElementById('request-info');
+    let infoContent = infoPanel.textContent;
+    infoPanel.innerHTML = infoContent;
+    infoPanel.style.display = "block"
+  </script>
+  {{/if}}
+
 
   <div id="main-content" class="form">
     {{request_form wysiwyg=true}}
