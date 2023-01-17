@@ -41,6 +41,19 @@ let categoryImages = {
 </section>
 
 <div class="container">
+  {{#if settings.call_out}}
+<div class="container__announcements">
+    <div class="container__text">
+     <p><b>
+  {{#if settings.use_dc}}{{dc settings.call_out_first_text}}{{else}}{{settings.call_out_first_text}}{{/if}}</b>
+   {{#if settings.use_dc}}{{dc settings.call_out_text}}{{else}}{{settings.call_out_text}}{{/if}}
+   <a href="{{settings.call_out_link}}"><b>
+    {{#if settings.use_dc}}{{dc settings.call_out_link_text}}{{else}}{{settings.call_out_link_text}}{{/if}}
+   </b></a>
+     </p>
+   </div>
+</div>
+{{/if}}
   <section class="section knowledge-base">
     <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
     <section class="categories blocks">

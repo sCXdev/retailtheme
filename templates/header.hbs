@@ -23,7 +23,9 @@
           </li>
         {{/if}}
         {{#if settings.header_submit_request}}
-    <li><a href="/hc/requests/new">
+        <li>
+          {{#if settings.request_page_title}}
+          <a href="/hc/requests/new">
             {{#if settings.use_dc}}
               {{dc settings.request_page_title}}
             {{else}}
@@ -31,8 +33,9 @@
             {{/if}}
             </a>
             {{else}}
-              {{link 'new_request' class='submit-a-request'}}{{/if}}
+              {{link 'new_request' class='submit-a-request'}}
           </li>
+          {{/if}}
         {{/if}}
         {{#unless signed_in}}
         {{#if settings.header_sign_in}}

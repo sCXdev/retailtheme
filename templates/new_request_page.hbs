@@ -22,6 +22,19 @@
   </div>
 </section>
 <div class="container article">
+  {{#if settings.call_out}}
+<div class="container__announcements">
+    <div class="container__text">
+     <p><b>
+  {{#if settings.use_dc}}{{dc settings.call_out_first_text}}{{else}}{{settings.call_out_first_text}}{{/if}}</b>
+   {{#if settings.use_dc}}{{dc settings.call_out_text}}{{else}}{{settings.call_out_text}}{{/if}}
+   <a href="{{settings.call_out_link}}"><b>
+    {{#if settings.use_dc}}{{dc settings.call_out_link_text}}{{else}}{{settings.call_out_link_text}}{{/if}}
+   </b></a>
+     </p>
+   </div>
+</div>
+{{/if}}
  {{breadcrumbs}}
   <h1 class="{{#if settings.request_page_information}}no-margin{{/if}}">{{#if settings.request_page_title}}
     {{#if settings.use_dc}}{{dc settings.request_page_title}}{{else}}{{settings.request_page_title}}{{/if}}{{else}}

@@ -227,7 +227,7 @@ body {
   background-color: $background_color;
   color: $text_color;
   font-family: $text_font;
-  font-size: 15px;
+  font-size: #{$font_size}px;
   line-height: 1.25;
   -webkit-font-smoothing: antialiased;
 }
@@ -516,7 +516,7 @@ ul {
   border: 0;
   border-radius: #{$border_radius}px;
   color: $brand_text_color;
-  font-size: 14px;
+  font-size: $font_size;
   line-height: 2.72;
   min-width: 190px;
   padding: 0 1.9286em;
@@ -620,7 +620,7 @@ ul {
 .table th,
 .table th a {
   color: lighten($text_color, 20%);
-  font-size: 13px;
+  font-size: $font_size;
   text-align: left;
 }
 
@@ -6038,4 +6038,58 @@ body .is-selected .pika-button {
   order: 2;
   line-height: 12px;
   margin-bottom: 0px;
+}
+
+
+ /* HC CALLOUT */
+ .container__announcements {
+  color: $text_color;
+  border-radius: #{$border_radius}px;
+  background-color: $call_out_color;
+  margin: 10px 0;
+  height:auto;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 16px;
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+}
+
+#callout-information {
+  fill: $call_out_color;
+  height: 16px;
+  margin: 2px 8px 0 0;
+}
+
+.container__announcements--bounding {
+  display: flex;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+@media (max-width: 959px) {
+  .container__announcements--bounding {
+      margin: 0 ;
+  }
+}
+
+.home-section .container__announcements {
+    transform: translateY(-30px)
+}
+.container__text {
+   font-size: #{$font_size}px;
+   text-align: initial;
+  padding-right: 20px;
+   line-height: 22px;
+}
+
+.container__text p {
+  margin: 0;
+  letter-spacing: 0.01875em;
+  text-align: center;
+}
+
+.container__announcements.c_a_c {
+  display: none;
 }
