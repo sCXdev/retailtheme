@@ -244,6 +244,7 @@ h5,
 h6 {
   font-family: $heading_font;
   margin-top: 0;
+  color: $heading_color;
 }
 
 h1, h2, h3 {
@@ -1847,6 +1848,10 @@ zd-autocomplete-multibrand {
   margin-bottom: 40px;
 }
 
+
+.homepage-title {
+  font-size: 1.5rem;
+}
 
 
 .home-section h2 {
@@ -5683,7 +5688,7 @@ html[dir="rtl"] .notification-left-aligned {
 
 .background_2 {
   background-color: $brand_color;
-  color: $brand_text_color;
+  color: $brand_text_color!important;
 }
 
 .header_tf_standard {

@@ -71,7 +71,7 @@ let categoryImages = {
                   </script>
               </div>
               {{/isnt}}
-                <span class="blocks-item-title {{../settings.cat_title_style}}">{{name}}</span>
+                <span class="blocks-item-title {{../settings.cat_title_style}} {{#is ../settings.cat_border_type 'background_2' }}background_2{{/is}}">{{name}}</span>
                 {{#if ../settings.show_description_cat}}
                 <span class="blocks-item-description">{{excerpt description}}</span>
                 {{/if}}
@@ -124,7 +124,7 @@ let categoryImages = {
 
     {{#if promoted_articles}}
       <section class="articles">
-        <h2>{{t 'promoted_articles'}}</h2>
+        <h2 class="homepage-title">{{t 'promoted_articles'}}</h2>
         <ul class="article-list promoted-articles">
           {{#each promoted_articles}}
             <li class="promoted-articles-item {{../settings.promoted_border_type}}">
@@ -148,7 +148,7 @@ let categoryImages = {
 {{#if settings.show_faq}}
   <section class="section">
     {{#if settings.faq_title}}
-    <h2 class="heading-home">
+    <h2 class="homepage-title">
       {{#if settings.use_dc}}{{dc settings.faq_title}}{{else}}{{settings.faq_title}}{{/if}}</h2>
     {{/if}}
     <div class="faq">
@@ -311,7 +311,7 @@ let categoryImages = {
   {{#if settings.show_community_tile}}
   {{#if help_center.community_enabled}}
     <section class="section home-section community">
-      <h2>{{t 'community'}}</h2>
+      <h2 class="homepage-title">{{t 'community'}}</h2>
       {{#link 'community' class='community-link'}}
         {{t 'join_conversation'}}
       {{/link}}
