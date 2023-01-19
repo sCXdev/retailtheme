@@ -109,7 +109,7 @@ let categoryImages = {
                     <img class="cat-image {{settings.cat_image_type}}" aria-label="{{settings.category_man_title}}" src="{{settings.category_man_image}}">
               </div>
               {{/isnt}}
-                  <span class="blocks-item-title {{settings.cat_title_style}}">
+                  <span class="blocks-item-title {{settings.cat_title_style}} {{#is settings.cat_border_type 'background_2' }}background_2{{/is}}">
                     {{settings.category_man_title}}
                   </span>
                   {{#if settings.show_description_cat}}
