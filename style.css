@@ -1671,7 +1671,8 @@ zd-autocomplete-multibrand {
 }
 
 .page-header-description {
-  font-style: italic;
+  //font-style: italic;
+  color: $link_color;
   margin: 0 0 30px 0;
   word-break: break-word;
 }
@@ -2274,6 +2275,7 @@ main .breadcrumbs {
 
 .article-avatar {
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 .article-author {
@@ -2312,6 +2314,11 @@ main .breadcrumbs {
 .article-meta {
   display: inline-block;
   vertical-align: middle;
+  color: $link_color;
+}
+
+.article-title {
+  margin: 0px;
 }
 
 .article-body a {
