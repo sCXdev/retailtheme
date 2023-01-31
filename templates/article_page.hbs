@@ -21,18 +21,7 @@
     </div>
   </div>
 </section><div class="container">
-  {{!-- <nav class="sub-nav">
-    {{!breadcrumbs}}
-    <div class="search-container">
-      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-      </svg>
-      {{!search scoped=settings.scoped_kb_search submit=false}}
-    </div>
-  </nav> --}}
-
-  <div class="article-container {{#if settings.show_articles_in_section}}{{else}}no-side{{/if}}" id="article-container">
+ <div class="article-container {{#if settings.show_articles_in_section}}{{else}}no-side{{/if}}" id="article-container">
     <aside class="article-sidebar {{#if settings.show_articles_in_section}}{{else}}no-side{{/if}}" aria-labelledby="section-articles-title">
       {{#if settings.show_articles_in_section}}
         <div class="collapsible-sidebar">
@@ -169,6 +158,7 @@
           {{/if}}
         </div>
         {{#with article}}
+        {{#if ../settings.show_article_voting}}
           <div class="article-votes">
             <span class="article-votes-question" id="article-votes-label">{{t 'was_this_article_helpful'}}</span>
             <div class="article-votes-controls" role="group" aria-labelledby="article-votes-label">
@@ -181,6 +171,7 @@
             </small>
             {{/if}}
           </div>
+           {{/if}}
         {{/with}}
 
         {{#if settings.show_submit_request_article}}
