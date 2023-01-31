@@ -71,10 +71,12 @@ let categoryImages = {
                   </script>
               </div>
               {{/isnt}}
-                <span class="blocks-item-title {{../settings.cat_title_style}} {{#is ../settings.cat_border_type 'background_2' }}background_2{{/is}}">{{name}}</span>
-                {{#if ../settings.show_description_cat}}
-                <span class="blocks-item-description">{{excerpt description}}</span>
-                {{/if}}
+                <div class="cat-info">
+                  <span class="blocks-item-title {{../settings.cat_title_style}} {{#is ../settings.cat_border_type 'background_2' }}background_2{{/is}}">{{name}}</span>
+                  {{#if ../settings.show_description_cat}}
+                  <span class="blocks-item-description">{{excerpt description}}</span>
+                  {{/if}}
+                </div>
               </a>
             </li>
           {{else}}
@@ -90,12 +92,14 @@ let categoryImages = {
                   </script>
               </div>
               {{/isnt}}
+              <div class="cat-info">
                   <span class="blocks-item-title {{../../settings.cat_title_style}}">
                     {{name}}
                   </span>
                   {{#if ../../settings.show_description_cat}}
                   <span class="blocks-item-description">{{excerpt description}}</span>
                    {{/if}}
+              </div>
                 </a>
               </li>
             {{/each}}
@@ -109,12 +113,14 @@ let categoryImages = {
                     <img class="cat-image {{settings.cat_image_type}}" aria-label="{{settings.category_man_title}}" src="{{settings.category_man_image}}">
               </div>
               {{/isnt}}
+                <div class="cat-info">
                   <span class="blocks-item-title {{settings.cat_title_style}} {{#is settings.cat_border_type 'background_2' }}background_2{{/is}}">
                     {{settings.category_man_title}}
                   </span>
                   {{#if settings.show_description_cat}}
                   <span class="blocks-item-description">{{settings.category_man_desc}}</span>
                    {{/if}}
+                </div>
                 </a>
               </li>
         {{/if}}

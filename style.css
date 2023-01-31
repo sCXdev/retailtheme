@@ -1740,13 +1740,13 @@ zd-autocomplete-multibrand {
 
 @media (min-width: 768px) {
   .blocks-list {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat($cat_title_max,1fr);
     gap: 20px;
   }
 }
 
 .blocks-item {
-  border-radius:  #{$border_radius}px;
+  border-radius: #{$border_radius}px;
   box-sizing: border-box;
   color: $brand_color;
   display: flex;
@@ -1754,18 +1754,12 @@ zd-autocomplete-multibrand {
   max-width: 100%;
   text-align: center;
   background-color: $background_color;
-}
-
-.cat-overflow {
-  margin-bottom: 15px;
-}
-
-.blocks-item:hover, .blocks-item:focus, .blocks-item:active {
-  // background-color: $brand_color;
+  max-width: #{$category_item_width}px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .blocks-item:hover *, .blocks-item:focus *, .blocks-item:active * {
-  //color: $brand_text_color;
   text-decoration: none;
 }
 
@@ -1787,7 +1781,7 @@ zd-autocomplete-multibrand {
 
 .blocks-item-link {
   color: $text_color;
-  padding: 10px 15px;
+  //padding-bottom: 15px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -1810,6 +1804,7 @@ zd-autocomplete-multibrand {
   margin-bottom: 0;
   font-size: 16px;
   font-weight: 600;
+  display: block;
 }
 
 .blocks-item-title.hf {
@@ -1821,12 +1816,15 @@ zd-autocomplete-multibrand {
 
 .blocks-item-description:not(:empty) {
   margin-top: 10px;
+  font-size: 13px;
+  color: $link_color;
 }
-
+.cat-info {
+  padding: 10px 15px;
+}
 @media (min-width: 768px) {
-  
-.blocks-item-link  {
-  padding: 20px 30px;
+  .cat-info {
+    padding: 20px 30px;
   }
 }
 
@@ -1836,10 +1834,28 @@ zd-autocomplete-multibrand {
   height: calc(#{$category_image_height}px * 0.65);
   min-height: 40px;
 }
+
+.cat-image.photo {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: #{$border_radius}px;
+  border-top-right-radius: #{$border_radius}px;
+}
+
+.none .cat-image.photo {
+  border-radius: #{$border_radius}px;
+}
+
+.cat-image.icon {
+  margin-top: 10px;
+}
 @media (min-width: 768px) {
-  .cat-image {
-    height: #{$category_image_height}px;
-  }
+    .cat-image {
+      height: #{$category_image_height}px;
+    }
+    .cat-image.icon {
+      margin-top: 20px;
+    }
   }
 
 
@@ -5804,7 +5820,7 @@ button.accordion span {
 }
 
 .faq {
-  border-radius: #{$border_radius}px;
+  //border-radius: #{$border_radius}px;
   margin-bottom: 60px;
 }
 
@@ -5813,9 +5829,6 @@ button.accordion span {
   background-color: $background_color;
 }
 
-.faq .panel-house:last-child .panel {
- // border-bottom: none;
-}
 .faq-body {
   color: $text_color;
 }

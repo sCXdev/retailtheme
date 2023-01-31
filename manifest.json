@@ -1,7 +1,7 @@
 {
   "name": "Retail Theme",
   "author": "SuccessCX",
-  "version": "0.0.00014",
+  "version": "0.0.00015",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -492,7 +492,7 @@
           "type": "text",
           "description": "Set the amount of smoothing on corners",
           "label": "Border radius",
-          "value": "0"
+          "value": "10"
         }
       ]
     },
@@ -745,7 +745,35 @@
           "type": "text",
           "description": "Choose the size of the image when using a non dynamic category display",
           "label": "Category image height",
-          "value": "100"
+          "value": "120"
+        },
+        {
+          "identifier": "category_item_width",
+          "type": "text",
+          "description": "Choose the maximum size in pixels for the tiles width",
+          "label": "Category tile width",
+          "value": "300"
+        },
+        {
+          "identifier": "cat_title_max",
+          "type": "list",
+          "description": "Choose maximum row amount for desktop",
+          "label": "Tiles maximum row",
+          "value": "3",
+          "options": [
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            }
+          ]
         },
         {
           "identifier": "show_description_cat",
@@ -1495,7 +1523,7 @@
           "identifier": "show_article_voting",
           "type": "checkbox",
           "description": "Shows article voting",
-          "label": "Article voting?",
+          "label": "Article voting",
           "value": true
         },
         {
