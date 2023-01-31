@@ -1,7 +1,7 @@
 {
   "name": "Retail Theme",
   "author": "SuccessCX",
-  "version": "0.0.00012",
+  "version": "0.0.00013",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -1239,74 +1239,6 @@
           "label": "Category 12 Image"
         }
       ]
-    },
-    {
-      "label": "article_page_group_label",
-      "variables": [
-        {
-          "identifier": "show_articles_in_section",
-          "type": "checkbox",
-          "description": "articles_in_section_description",
-          "label": "articles_in_section_label",
-          "value": false
-        },
-        {
-          "identifier": "show_article_author",
-          "type": "checkbox",
-          "description": "article_author_description",
-          "label": "article_author_label",
-          "value": false
-        },
-        {
-          "identifier": "show_article_comments",
-          "type": "checkbox",
-          "description": "article_comments_description",
-          "label": "article_comments_label",
-          "value": true
-        },
-        {
-          "identifier": "show_follow_article",
-          "type": "checkbox",
-          "description": "follow_article_description",
-          "label": "follow_article_label",
-          "value": false
-        },
-        {
-          "identifier": "show_recently_viewed_articles",
-          "type": "checkbox",
-          "description": "recently_viewed_articles_description",
-          "label": "recently_viewed_articles_label",
-          "value": true
-        },
-        {
-          "identifier": "show_related_articles",
-          "type": "checkbox",
-          "description": "related_articles_description",
-          "label": "related_articles_label",
-          "value": true
-        },
-        {
-          "identifier": "show_article_sharing",
-          "type": "checkbox",
-          "description": "article_sharing_description",
-          "label": "article_sharing_label",
-          "value": true
-        },
-        {
-          "identifier": "show_article_voting_count",
-          "type": "checkbox",
-          "description": "Shows the quantity of votes",
-          "label": "Article vote count",
-          "value": false
-        },
-        {
-          "identifier": "show_submit_request_article",
-          "type": "checkbox",
-          "description": "Show the submit a request link at the bottom of articles",
-          "label": "Show Submit a Request?",
-          "value": false
-        }
-      ]
     },{
       "label": "🏠 FAQ Section",
       "variables": [
@@ -1505,7 +1437,370 @@
           "value": "https://www.google.com"
         }
       ]
-    }, 
+    },
+    {
+      "label": "👤 Header",
+      "variables": [
+        {
+          "identifier": "header_text_style",
+          "type": "list",
+          "description": "Choose which font is displayed in the header",
+          "label": "Header text style",
+          "value": "header_tf_standard",
+          "options": [
+            {
+              "label": "Standard font, standard case",
+              "value": "header_tf_standard"
+            },
+            {
+              "label": "Standard font, upper case",
+              "value": "header_tf_uppercase"
+            },
+            {
+              "label": "Header font, standard case",
+              "value": "header_hf_standard"
+            },
+            {
+              "label": "Header font, upper case",
+              "value": "header_hf_uppercase"
+            }
+          ]
+        },
+        {
+          "identifier": "header_logo_link",
+          "type": "text",
+          "description": "Link for when users click on top left logo",
+          "label": "Logo link",
+          "value": "/hc/"
+        },
+        {
+          "identifier": "header_logo_name",
+          "type": "checkbox",
+          "description": "Show the help centre name next to the left hand logo",
+          "label": "Show help center name?",
+          "value": false
+        },
+        {
+          "identifier": "header_sign_in",
+          "type": "checkbox",
+          "description": "Show the sign in button for Anonymous users",
+          "label": "Show Sign In link?",
+          "value": false
+        },
+        {
+          "identifier": "header_return_on",
+          "type": "checkbox",
+          "description": "Show return to main website for Anonymous users",
+          "label": "Return to link?",
+          "value": true
+        },
+        {
+          "identifier": "header_return_link",
+          "type": "text",
+          "description": "Link for return to main website",
+          "label": "Header return to link",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "header_return_name",
+          "type": "text",
+          "description": "Name for return to main website",
+          "label": "Header return to name",
+          "value": "Return to Main Website"
+        },
+        {
+          "identifier": "header_return_color",
+          "type": "color",
+          "description": "Border color for elements within the page",
+          "label": "Header return to color",
+          "value": "#FFFFFF"
+        },
+        {
+          "identifier": "header_submit_request",
+          "type": "checkbox",
+          "description": "Enable a submit a request link",
+          "label": "Header submit a request",
+          "value": true
+        },
+        {
+          "identifier": "header_community",
+          "type": "checkbox",
+          "description": "Enable a the community link",
+          "label": "Header community link",
+          "value": false
+        }
+      ]
+    },{
+      "label": "🦶 Footer",
+      "variables": [
+        {
+          "identifier": "show_cta",
+          "type": "checkbox",
+          "description": "Show or Hide the footer CTA",
+          "label": "Footer CTA?",
+          "value": true
+        },
+        {
+          "identifier": "hide_cta_request",
+          "type": "checkbox",
+          "description": "Hide the footer CTA on the new request page",
+          "label": "Hide CTA on new request page?",
+          "value": true
+        },
+        {
+          "identifier": "cta_background_type",
+          "type": "list",
+          "description": "Image or color?",
+          "label": "CTA background type",
+          "value": "cta_image",
+          "options": [
+            {
+              "label": "Color",
+              "value": "cta_color"
+            },
+            {
+              "label": "Image",
+              "value": "cta_image"
+            }
+          ]
+        },
+        {
+          "identifier": "cta_bg_color",
+          "type": "color",
+          "description": "The background color to be used on the CTA",
+          "label": "CTA background color",
+          "value": "#125a99"
+        },
+        {
+          "identifier": "cta_background_image",
+          "type": "file",
+          "description": "To be shown when image is chosen above",
+          "label": "CTA background image"
+        },
+        {
+          "identifier": "cta_text_color",
+          "type": "color",
+          "description": "The Text color to be used on the CTA",
+          "label": "CTA text color",
+          "value": "#FFFFFF"
+        },
+        {
+          "identifier": "cta_title",
+          "type": "text",
+          "description": "Text for the Title, try and keep it within 8 words",
+          "label": "Footer CTA title",
+          "value": "Can't find what you need?"
+        },
+        {
+          "identifier": "cta_description",
+          "type": "text",
+          "description": "Optional description to show under the Title. leave blank to deactivate",
+          "label": "Footer CTA description",
+          "value": "Our Team is here to help"
+        },
+        {
+          "identifier": "cta_button_text",
+          "type": "text",
+          "description": "Text to show on the button",
+          "label": "Footer CTA button text",
+          "value": "Submit a request"
+        },
+        {
+          "identifier": "cta_button_link",
+          "type": "text",
+          "description": "Link for the CTA button, for the new request page enter /hc/requests/new",
+          "label": "Footer CTA button link",
+          "value": "/hc/requests/new"
+        },
+        {
+          "identifier": "footer_item_1_name",
+          "type": "text",
+          "description": "Name for item 1 in the footer",
+          "label": "Name item 1 link",
+          "value": "Link 1"
+        },
+        {
+          "identifier": "footer_item_1_link",
+          "type": "text",
+          "description": "Link for item 1 in the footer",
+          "label": "Footer item 1 link",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_item_2_name",
+          "type": "text",
+          "description": "Name for item 2 in the footer",
+          "label": "Name item 2 link",
+          "value": "Link 2"
+        },
+        {
+          "identifier": "footer_item_2_link",
+          "type": "text",
+          "description": "Link for item 2 in the footer",
+          "label": "Footer item 2 link",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_item_3_name",
+          "type": "text",
+          "description": "Name for item 3 in the footer",
+          "label": "Name item 3 link",
+          "value": "Link 3"
+        },
+        {
+          "identifier": "footer_item_3_link",
+          "type": "text",
+          "description": "Link for item 3 in the footer",
+          "label": "Footer item 3 link",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_item_4_name",
+          "type": "text",
+          "description": "Name for item 4 in the footer",
+          "label": "Name item 4 link",
+          "value": ""
+        },
+        {
+          "identifier": "footer_item_4_link",
+          "type": "text",
+          "description": "Link for item 4 in the footer",
+          "label": "Footer item 4 link",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_item_5_name",
+          "type": "text",
+          "description": "Name for item 5 in the footer",
+          "label": "Name item 5 link",
+          "value": ""
+        },
+        {
+          "identifier": "footer_item_5_link",
+          "type": "text",
+          "description": "Link for item 5 in the footer",
+          "label": "Footer item 5 link",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "show_footer_social",
+          "type": "checkbox",
+          "description": "Show the Social Links in the footer",
+          "label": "Footer Footer Social Links?",
+          "value": true
+        },
+        {
+          "identifier": "footer_social_facebook",
+          "type": "text",
+          "description": "Link for Facebook, leave blank to deactivate",
+          "label": "Footer social - Facebook",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_social_instagram",
+          "type": "text",
+          "description": "Link for Instagram, leave blank to deactivate",
+          "label": "Footer social - Instagram",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_social_youtube",
+          "type": "text",
+          "description": "Link for YouTube, leave blank to deactivate",
+          "label": "Footer social - YouTube",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_social_linkedin",
+          "type": "text",
+          "description": "Link for Linkedin, leave blank to deactivate",
+          "label": "Footer social - Linkedin",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_social_twitter",
+          "type": "text",
+          "description": "Link for Twitter, leave blank to deactivate",
+          "label": "Footer social - Twitter",
+          "value": "https://www.google.com"
+        },
+        {
+          "identifier": "footer_copyright",
+          "type": "text",
+          "description": "Text for Copyright at base of footer",
+          "label": "Footer copyright",
+          "value": "Copyright 2022"
+        }
+      ]
+    },
+    {
+      "label": "article_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_articles_in_section",
+          "type": "checkbox",
+          "description": "articles_in_section_description",
+          "label": "articles_in_section_label",
+          "value": false
+        },
+        {
+          "identifier": "show_article_author",
+          "type": "checkbox",
+          "description": "article_author_description",
+          "label": "article_author_label",
+          "value": false
+        },
+        {
+          "identifier": "show_article_comments",
+          "type": "checkbox",
+          "description": "article_comments_description",
+          "label": "article_comments_label",
+          "value": true
+        },
+        {
+          "identifier": "show_follow_article",
+          "type": "checkbox",
+          "description": "follow_article_description",
+          "label": "follow_article_label",
+          "value": false
+        },
+        {
+          "identifier": "show_recently_viewed_articles",
+          "type": "checkbox",
+          "description": "recently_viewed_articles_description",
+          "label": "recently_viewed_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_related_articles",
+          "type": "checkbox",
+          "description": "related_articles_description",
+          "label": "related_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_sharing",
+          "type": "checkbox",
+          "description": "article_sharing_description",
+          "label": "article_sharing_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_voting_count",
+          "type": "checkbox",
+          "description": "Shows the quantity of votes",
+          "label": "Article vote count",
+          "value": false
+        },
+        {
+          "identifier": "show_submit_request_article",
+          "type": "checkbox",
+          "description": "Show the submit a request link at the bottom of articles",
+          "label": "Show Submit a Request?",
+          "value": false
+        }
+      ]
+    },
     {
       "label": "section_page_group_label",
       "variables": [
@@ -1514,7 +1809,7 @@
           "type": "checkbox",
           "description": "follow_section_description",
           "label": "follow_section_label",
-          "value": true
+          "value": false
         }
       ]
     },
@@ -1583,23 +1878,6 @@
       "label": "🧪 Advanced Settings",
       "variables": [
         {
-          "identifier": "breadcrumb_font_type",
-          "type": "list",
-          "description": "Defines style of breadcrumbs and aside navigation titles",
-          "label": "Capitalization for breadcrumbs",
-          "value": "initial",
-          "options": [
-            {
-              "label": "Uppercase",
-              "value": "uppercase"
-            },
-            {
-              "label": "Default",
-              "value": "initial"
-            }
-          ]
-        },
-        {
           "identifier": "show_language_selector",
           "type": "checkbox",
           "description": "Show the language selector, enabling users to choose the locale",
@@ -1619,23 +1897,6 @@
           "description": "Determined in pixels, enter number only",
           "label": "Font size",
           "value": "15"
-        },
-        {
-          "identifier": "font_synth",
-          "type": "list",
-          "description": "Determine whether custom fonts obey font-weight",
-          "label": "Font synthesis",
-          "value": "none",
-          "options": [
-            {
-              "label": "Off",
-              "value": "none"
-            },
-            {
-              "label": "On",
-              "value": "weight"
-            }
-          ]
         }      
       ]
     }

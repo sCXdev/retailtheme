@@ -5499,6 +5499,7 @@ html[dir="rtl"] .notification-left-aligned {
   text-align: initial;
   vertical-align: middle;
   min-height: 30px;
+  color: $text_color;
 }
 
 .dropdown-toggle:hover {
@@ -5937,8 +5938,8 @@ body .nesty-panel li {
 body .nesty-panel li:hover,
 body .nesty-panel li:active,
 body .nesty-panel li:focus {
-  background-color: $secondary_background_color;
-  color: $text_color;
+  background-color: $brand_color;
+  color: $brand_text_color;
 }
 
 .nesty-expand:after,
