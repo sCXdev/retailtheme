@@ -853,7 +853,6 @@ ul {
   border: 1px solid $header_return_color;
   padding: 10px 15px;
   height: auto;
-  //margin-left: 10px;
 }
 .user-nav-list a.return-to:hover,
 .user-nav-list a.return-to:focus,
@@ -903,7 +902,6 @@ ul {
   color: $header_text_color;
   display: none;
   font-size: 14px;
-  // padding: 0 20px 0 0;
   width: auto;
 }
 
@@ -932,7 +930,6 @@ ul {
   background: none;
   border: 0;
   width: auto;
-  // min-width: 71px;
   cursor: pointer;
   color: $header_text_color;
   padding: 0;
@@ -1453,10 +1450,6 @@ ul {
   width: 100%;
 }
 
-.search input[type="search"]:focus {
-  //color: #555;
-}
-
 .requests-table-toolbar .search {
   border: 1px solid $border_color;
   border-radius: #{$border_radius}px;
@@ -1671,7 +1664,6 @@ zd-autocomplete-multibrand {
 }
 
 .page-header-description {
-  //font-style: italic;
   color: $link_color;
   margin: 0 0 30px 0;
   word-break: break-word;
@@ -1781,7 +1773,6 @@ zd-autocomplete-multibrand {
 
 .blocks-item-link {
   color: $text_color;
-  //padding-bottom: 15px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -2007,10 +1998,6 @@ zd-autocomplete-multibrand {
   font-size: 18px;
   font-family: $heading_font;
   color: $text_color;
-  // text-decoration: underline;
-  // text-underline-offset: 3px;
-  // text-decoration-thickness: 2px;
-  // text-decoration-color: $border_color;
   order: 1;
 }
 
@@ -2107,13 +2094,6 @@ zd-autocomplete-multibrand {
   flex: 1;
 }
 
-@media (min-width: 1024px) {
-  .category-content,
-  .section-container {
-    // flex: 0 0 80%;
-  }
-}
-
 .section-tree {
   display: flex;
   flex-direction: column;
@@ -2193,12 +2173,6 @@ zd-autocomplete-multibrand {
   flex: 1;
 }
 
-@media (min-width: 1024px) {
-  .section-content {
-   // flex: 0 0 80%;
-  }
-}
-
 .section-list {
   margin: 40px 0;
 }
@@ -2245,8 +2219,6 @@ zd-autocomplete-multibrand {
   .article {
     flex: 1 0 66%;
     max-width: var(--page-width);
-    //min-width: var(--page-width);
-    //padding: 0 30px;
   }
 }
 
@@ -2509,10 +2481,6 @@ main .breadcrumbs {
 
 .article-more-questions a:hover, .article-more-questions a:active, .article-more-questions a:focus {
   color: $hover_link_color;
-}
-
-.article-return-to-top {
-  //border-top: 1px solid $border_color;
 }
 
 @media (min-width: 1024px) {
@@ -5651,7 +5619,6 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 .content-tag-list li {
-  //border-right: 1px solid #C2C8CC;
   margin-bottom: 4px;
 }
 
@@ -5669,7 +5636,6 @@ html[dir="rtl"] .notification-left-aligned {
 
 [dir="ltr"] .content-tag-list li {
 
-  //margin: 8px;
 }
 
 [dir="rtl"] .content-tag-list li {
@@ -5820,7 +5786,6 @@ button.accordion span {
 }
 
 .faq {
-  //border-radius: #{$border_radius}px;
   margin-bottom: 60px;
 }
 
@@ -5854,9 +5819,9 @@ button.accordion[aria-expanded="true"] {
 }
 button.accordion[aria-expanded="true"] .acc-minus svg {
   display: inline-block;
-    }
+}
 
-    // REQUEST FORM STUFF
+// REQUEST FORM STUFF
 .multiform-box {
   height: 100%;
   width: 100%;
