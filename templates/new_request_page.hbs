@@ -52,6 +52,13 @@
     let infoContent = infoPanel.textContent;
     infoPanel.innerHTML = infoContent;
     infoPanel.style.display = "block"
+    //change the breadcrumb, check if DC is on first though
+    let requestBreadcrumb = document.querySelector('.breadcrumbs > li:nth-child(2)')
+    if ({{settings.use_dc}}) {
+      requestBreadcrumb.textContent = `{{dc settings.request_page_title}}`
+    } else {
+      requestBreadcrumb.textContent = `{{settings.request_page_title}}`
+    };
   </script>
   {{/if}}
 

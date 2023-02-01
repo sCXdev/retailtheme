@@ -6084,3 +6084,60 @@ body .is-selected .pika-button {
 .container__announcements.c_a_c {
   display: none;
 }
+
+/* 
+ARTICLE CALLOUTS
+ */
+ .callout {
+  background-color: #E6F8F8;
+  color: #002526;
+  padding: 30px 25px 30px 40px;
+  border-left: 5px solid #02B9BD;
+  position: relative;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 2px 5px;
+  margin: 15px 0;
+}
+
+.callout::before {
+  color: #02B9BD;
+  content: "ⓘ";
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 29px;
+  left: 14px;
+  color: #002526;
+}
+.callout.red {
+    background-color: #FDEDE9;
+    color: #2E0F07;
+    border-left-color: #E84A25;
+}
+
+.callout.red::before {
+    content: "⚠";
+    font-size: 20px;
+    left: 10px;
+    color: #E84A25;
+}
+
+.callout.amber {
+    background-color: #FFFAEA;
+    color: #332908;
+    border-left-color: #FFCF29;
+}
+
+.callout.amber::before {
+  color: #FFCF29;
+}
+
+.callout.green {
+    background-color: #E6FBF3;
+    color: #002B1C;
+    border-left-color: #02D68A;
+}
+
+.callout.green::before {
+  color: #02D68A;
+}
