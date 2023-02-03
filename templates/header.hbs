@@ -16,12 +16,7 @@
         {{#if settings.header_community}}
         <li>{{link 'community'}}</li>
          {{/if}}
-        {{#if settings.header_return_on}}
-          <li>
-            <a href="{{settings.header_return_link}}" class="return-to">
-              {{#if settings.use_dc}}{{dc settings.header_return_name}}{{else}}{{settings.header_return_name}}{{/if}}</a>
-          </li>
-        {{/if}}
+        
         {{#if settings.header_submit_request}}
         <li>
           {{#if settings.request_page_title}}
@@ -36,6 +31,12 @@
               {{link 'new_request' class='submit-a-request'}}
           </li>
           {{/if}}
+        {{/if}}
+        {{#if settings.header_return_on}}
+          <li>
+            <a href="{{settings.header_return_link}}" class="return-to">
+              {{#if settings.use_dc}}{{dc settings.header_return_name}}{{else}}{{settings.header_return_name}}{{/if}}</a>
+          </li>
         {{/if}}
         {{#unless signed_in}}
         {{#if settings.header_sign_in}}

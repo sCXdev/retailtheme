@@ -236,7 +236,9 @@
                     </ol>
                   </li>
                   {{#unless is_external}}
+                  {{#if ../settings.show_article_author}}
                     <li class="meta-data">{{author.name}}</li>
+                  {{/if}}
                   {{/unless}}
                   <li class="meta-data">{{date created_at}}</li>
                 </ul>

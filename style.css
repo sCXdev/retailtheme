@@ -853,6 +853,7 @@ ul {
   border: 1px solid $header_return_color;
   padding: 10px 15px;
   height: auto;
+  margin-left: 10px;
 }
 .user-nav-list a.return-to:hover,
 .user-nav-list a.return-to:focus,
@@ -2458,6 +2459,7 @@ main .breadcrumbs {
 
 .article-votes {
   border: 1px solid $border_color;
+  border-radius: #{$border_radius}px;
   padding: 30px 0;
   text-align: center;
   margin-bottom: 30px;
@@ -3778,6 +3780,7 @@ main .breadcrumbs {
   width: 25px;
   height: 25px;
   border-radius: 50%;
+  color: $text_color;
 }
 
 @media (min-width: 1024px) {
@@ -5171,7 +5174,6 @@ main .breadcrumbs {
 
 .search-results .meta-group {
   display: block;
-  align-items: center;
   clear: both;
   color: #666;
 }
@@ -5299,7 +5301,7 @@ main .breadcrumbs {
   align-items: center;
 }
 
-.search-result-breadcrumbs {
+.meta-group .search-result-breadcrumbs {
   margin: 0;
 }
 
